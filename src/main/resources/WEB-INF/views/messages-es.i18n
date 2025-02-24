@@ -1,2 +1,3 @@
 # Airline
 validation.airline.phone = El número de teléfono puede empezar con '+' y debe tener entre 6 y 15 dígitos sin espacios en blanco ni caracteres especiales
+validation.airline.codeIATA = El código deberá estar formado por 3 letras en mayúscula, donde la útlima letra será normalmente una "X"
