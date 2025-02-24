@@ -39,7 +39,7 @@ public class Airline extends AbstractEntity {
 
 	@Mandatory
 	@Column(unique = true)
-	@Automapped
+	@Pattern(regexp = "^[A-Z]{3}$", message = "{validation.airline.codeIATA}")
 	private String				codeIATA;
 
 	@Mandatory
