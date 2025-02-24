@@ -1,0 +1,2 @@
+# Airline
+validation.airline.phone = The phone number can start with '+' and must have between 6 and 15 digits without blank spaces or special characters
