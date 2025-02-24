@@ -1,0 +1,56 @@
+key,name,codeIATA,website,type,foundationMoment,email,phone
+# name
+airline-01,airline,AAX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-02,L,ABX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-03,Lo,ACX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-04,"Lorem ipsum dolor sit amet, consectetur adipiscin",ADX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-05,"Lorem ipsum dolor sit amet, consectetur adipiscing",AEX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-06,โลเร็ม อิปซัม,AFX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-07,لوريم إيبسوم,AGX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-08,"洛伦·伊普森",AHX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-09,<marquee>Hacked</marquee>,AIX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-10,<script>alert(‘Hacked!’);</script>,AJX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-11,' or 'A' = 'A ,AKX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+# codeIATA
+airline-12,airline,XXX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-13,airline,ZZZ,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-14,airline,AAA,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+# website
+airline-15,airline,ALX,"ftp://a",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-16,airline,AMX,"ftp://a.b",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-17,airline,ANX,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-18,airline,AOX,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-19,airline,APX,"https://www.lorem-ipsum.org",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-20,airline,AQX,"ftp://www.lorem-ipsum.org",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-21,airline,ARX,"http://www.lorem-ipsum.org/dolor/sit.html",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-22,airline,ASX,"http://www.lorem-ipsum.org/dolor/sit.html#dolor",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-23,airline,ATX,"http://example.org?a=1&b=2",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-24,airline,AUX,"http://example.org?",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-25,airline,AVX,"http://example.org?a",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-26,airline,AWX,"http://example.org?a&b",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-27,airline,AXX,"http://example.org/",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-28,airline,AYX,"http://example.org/a",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-29,airline,AZX,"http://example.org/a/b",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-30,airline,BAX,"http://example.org/a/b?",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-31,airline,BBX,"http://example.org/a/b?a&b",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+# type
+#airline-32,airline,BCX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-33,airline,BDX,"http://lorem.com/ipsum",STANDARD,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+airline-34,airline,BEX,"http://lorem.com/ipsum",LOW_COST,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456789
+# foundationMoment
+airline-35,airline,BFX,"http://lorem.com/ipsum",LUXURY,2000/01/01 0:00,"acme@lorem-ipsum.org",+123456789
+airline-36,airline,BGX,"http://lorem.com/ipsum",LUXURY,2000/01/01 0:01,"acme@lorem-ipsum.org",+123456789
+airline-37,airline,BHX,"http://lorem.com/ipsum",LUXURY,2022/07/29 23:59,"acme@lorem-ipsum.org",+123456789
+airline-38,airline,BIX,"http://lorem.com/ipsum",LUXURY,2022/07/30 0:00,"acme@lorem-ipsum.org",+123456789
+# email
+airline-40,airline,BKX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"a@b.e",+123456789
+airline-41,airline,BLX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"a@b.es",+123456789
+airline-42,airline,BMX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"a@b.esx",+123456789
+airline-43,airline,BNX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.doloris.edu",+123456789
+airline-44,airline,BOX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.dolor.es.org",+123456789
+# phone
+airline-45,airline,BPX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",123456
+airline-46,airline,BQX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",987654321098765
+airline-47,airline,BRX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456
+airline-48,airline,BSX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+987654321098765
+airline-49,airline,BTX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+112233445566
