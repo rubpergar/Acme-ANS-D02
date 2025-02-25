@@ -23,6 +23,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.lauperfra-link" action="https://github.com/rubpergar/Acme-ANS-D01.git"/>
 			<acme:menu-suboption code="master.menu.anonymous.cyncasjua-link" action="https://www.spotify.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.macpercam-link" action="https://es.pinterest.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.rubpergar-link" action="https://www.youtube.com/"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
