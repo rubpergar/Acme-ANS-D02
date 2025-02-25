@@ -18,22 +18,24 @@ import lombok.Setter;
 @Setter
 public class Service extends AbstractEntity {
 
+	private static final long	serialVersionUID	= 1L;
+
 	@ValidString(max = 50)
 	@NotNull
-	private String	name;
+	private String				name;
 
 	@NotNull
-	private String	imageLink;
+	private String				imageLink;
 
 	@NotNull
 	@Min(0)
-	private Double	averageDwellTime;
+	private Double				averageDwellTime;
 
 	@Optional
 	@Column(unique = true)
 	@Pattern(regexp = "^[A-Z]{4}-[0-9]{2}$", message = "Invalid promotion code format")
-	private String	promotionCode;
+	private String				promotionCode;
 
 	@Min(0)
-	private Double	discountedMoney;
+	private Double				discountedMoney;
 }
