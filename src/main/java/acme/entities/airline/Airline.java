@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.Pattern;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
@@ -38,8 +37,8 @@ public class Airline extends AbstractEntity {
 	private String				name;
 
 	@Mandatory
+	@ValidString(pattern = "^[A-Z]{3}$", message = "{validation.airline.codeIATA}")
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{3}$", message = "{validation.airline.codeIATA}")
 	private String				codeIATA;
 
 	@Mandatory
@@ -63,7 +62,7 @@ public class Airline extends AbstractEntity {
 	private String				email;
 
 	@Optional
-	@Pattern(regexp = "^\\+?\\d{6,15}$", message = "{validation.airline.phone}")
+	@ValidString(pattern = "^\\+?\\d{6,15}$", message = "{validation.airline.phone}")
 	@Automapped
 	private String				phone;
 
