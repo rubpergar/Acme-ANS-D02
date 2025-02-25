@@ -3,13 +3,16 @@ package acme.entities.service;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 import acme.client.components.basis.AbstractEntity;
+import acme.client.components.datatypes.Money;
+import acme.client.components.mappings.Automapped;
+import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
+import acme.client.components.validation.ValidMoney;
+import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
+import acme.client.components.validation.ValidUrl;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,22 +23,28 @@ public class Service extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
+	@Mandatory
 	@ValidString(max = 50)
-	@NotNull
+	@Automapped
 	private String				name;
 
-	@NotNull
+	@Mandatory
+	@ValidUrl //??
+	@Automapped
 	private String				imageLink;
 
-	@NotNull
-	@Min(0)
+	@Mandatory
+	@ValidNumber //??
+	@Automapped
 	private Double				averageDwellTime;
 
 	@Optional
+	@ValidString(pattern = "^[A-Z]{4}-[0-9]{2}$")
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{4}-[0-9]{2}$", message = "Invalid promotion code format")
 	private String				promotionCode;
 
-	@Min(0)
-	private Double				discountedMoney;
+	@Mandatory
+	@ValidMoney
+	@Automapped
+	private Money				discountedMoney;
 }
