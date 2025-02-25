@@ -1,15 +1,19 @@
 
 package acme.entities.reviews;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
+import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
+import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidScore;
 import acme.client.components.validation.ValidString;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,26 +30,38 @@ public class Review extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	@ValidString(max = 50)
-	private String				alias;
-	@Mandatory
-	private LocalDateTime		postedMoment;
+	@Valid
+	@Automapped
+	private ReviewCategory		category;
 
 	@Mandatory
 	@ValidString(max = 50)
+	@Automapped
+	private String				alias;
+
+	@Mandatory
+	@ValidMoment(past = true)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				postedMoment;
+
+	@Mandatory
+	@ValidString(max = 50)
+	@Automapped
 	private String				subject;
 
 	@Mandatory
 	@ValidString(max = 255)
+	@Automapped
 	private String				text;
 
 	@Optional
-	@DecimalMin("0.0")
-	@DecimalMax("10.0")
-
+	@ValidScore
+	@Automapped
 	private Double				score;
 
 	@Optional
+	@Valid
+	@Automapped
 	private Boolean				recommended;
 
 }
