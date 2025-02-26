@@ -4,6 +4,7 @@ package acme.entities.assistenceAgents;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
 import acme.client.components.basis.AbstractEntity;
@@ -16,7 +17,12 @@ import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
 import acme.entities.airline.Airline;
+import lombok.Getter;
+import lombok.Setter;
 
+@Entity
+@Getter
+@Setter
 public class AssistanceAgent extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
