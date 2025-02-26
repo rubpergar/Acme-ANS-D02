@@ -1,0 +1,49 @@
+key,model,registrationNumber,capacity,cargoWeight,status,details
+# model
+aircraft-01,lorem,lorem01,10,25000,ACTIVE,lorem
+aircraft-02,L,lorem02,10,25000,ACTIVE,lorem
+aircraft-03,Lo,lorem03,10,25000,ACTIVE,lorem
+aircraft-04,"Lorem ipsum dolor sit amet, consectetur adipiscin",lorem04,10,25000,ACTIVE,lorem
+aircraft-05,"Lorem ipsum dolor sit amet, consectetur adipiscing",lorem05,10,25000,ACTIVE,lorem
+aircraft-06,โลเร็ม อิปซัม,lorem06,10,25000,ACTIVE,lorem
+aircraft-07,لوريم إيبسوم,lorem07,10,25000,ACTIVE,lorem
+aircraft-08,洛伦·伊普森,lorem08,10,25000,ACTIVE,lorem
+aircraft-09,<marquee>Hacked</marquee>,lorem09,10,25000,ACTIVE,lorem
+aircraft-10,<script>alert(‘Hacked!’);</script>,lorem10,10,25000,ACTIVE,lorem
+aircraft-11,' or 'A' = 'A ,lorem11,10,25000,ACTIVE,lorem
+# registrationNumber
+aircraft-12,lorem,L,10,25000,ACTIVE,lorem
+aircraft-13,lorem,Lo,10,25000,ACTIVE,lorem
+aircraft-14,lorem,"Lorem ipsum dolor sit amet, consectetur adipiscin",10,25000,ACTIVE,lorem
+aircraft-15,lorem,"Lorem ipsum dolor sit amet, consectetur adipiscing",10,25000,ACTIVE,lorem
+aircraft-16,lorem,โลเร็ม อิปซัม,10,25000,ACTIVE,lorem
+aircraft-17,lorem,لوريم إيبسوم,10,25000,ACTIVE,lorem
+aircraft-18,lorem,洛伦·伊普森,10,25000,ACTIVE,lorem
+aircraft-19,lorem,<marquee>Hacked</marquee>,10,25000,ACTIVE,lorem
+aircraft-20,lorem,<script>alert(‘Hacked!’);</script>,10,25000,ACTIVE,lorem
+aircraft-21,lorem,' or 'A' = 'A ,10,25000,ACTIVE,lorem
+# capacity
+aircraft-22,lorem,lorem12,0,25000,ACTIVE,lorem
+aircraft-23,lorem,lorem13,1,25000,ACTIVE,lorem
+aircraft-24,lorem,lorem14,9999,25000,ACTIVE,lorem
+aircraft-25,lorem,lorem15,10000,25000,ACTIVE,lorem
+# cargoWeight
+aircraft-26,lorem,lorem16,10,2000,ACTIVE,lorem
+aircraft-27,lorem,lorem17,10,2001,ACTIVE,lorem
+aircraft-28,lorem,lorem18,10,49999,ACTIVE,lorem
+aircraft-29,lorem,lorem19,10,50000,ACTIVE,lorem
+# status
+aircraft-30,lorem,lorem20,10,25000,ACTIVE,lorem
+aircraft-31,lorem,lorem21,10,25000,MAINTENANCE,lorem
+# details
+aircraft-32,lorem,lorem22,10,25000,ACTIVE,L
+aircraft-33,lorem,lorem23,10,25000,ACTIVE,Lo
+aircraft-34,lorem,lorem24,10,25000,ACTIVE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor"
+aircraft-35,lorem,lorem25,10,25000,ACTIVE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*"
+aircraft-36,lorem,lorem26,10,25000,ACTIVE,โลเร็ม อิปซัม
+aircraft-37,lorem,lorem27,10,25000,ACTIVE,لوريم إيبسوم
+aircraft-38,lorem,lorem28,10,25000,ACTIVE,洛伦·伊普森
+aircraft-39,lorem,lorem29,10,25000,ACTIVE,<marquee>Hacked</marquee>
+aircraft-40,lorem,lorem30,10,25000,ACTIVE,<script>alert(‘Hacked!’);</script>
+aircraft-41,lorem,lorem31,10,25000,ACTIVE,' or 'A' = 'A 
+aircraft-42,lorem,lorem32,10,25000,ACTIVE,
