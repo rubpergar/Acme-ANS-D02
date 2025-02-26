@@ -4,6 +4,7 @@ package acme.entities.customers;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
+import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
@@ -15,7 +16,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Customer {
+public class Customer extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
