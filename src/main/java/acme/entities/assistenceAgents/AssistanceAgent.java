@@ -8,6 +8,7 @@ import javax.persistence.ManyToOne;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Money;
+import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
@@ -25,31 +26,37 @@ public class AssistanceAgent extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
+	@ValidString(pattern = "^[A-Z]{2-3}\\d{6}$")
 	@Column(unique = true)
-	@ValidString(pattern = "^[A-Z]{2-3}\\d{6}$") //where the first two or three letters correspond to their initials
 	private String				code;
 
 	@Mandatory
 	@ValidString(max = 255)
-	private String				languages; //string o list<string>??
+	@Automapped
+	private String				languages;
 
 	@Mandatory
-	@ManyToOne
+	@ManyToOne(optional = false)
+	@Automapped
 	private Airline				airline;
 
 	@Mandatory
 	@ValidMoment(past = true)
+	@Automapped
 	private Date				moment;
 
 	@Optional
 	@ValidString(max = 255)
+	@Automapped
 	private String				bio;
 
-	@Optional								//validMoney?
+	@Optional
 	@ValidMoney
-	private Money				salary;				//Money?
+	@Automapped
+	private Money				salary;
 
 	@Optional
 	@ValidUrl
+	@Automapped
 	private String				photo;
 }
