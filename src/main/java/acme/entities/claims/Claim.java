@@ -1,7 +1,7 @@
 
-package acme.entities.reviews;
+package acme.entities.claims;
 
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
@@ -11,9 +11,8 @@ import javax.validation.Valid;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
-import acme.client.components.validation.Optional;
+import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidMoment;
-import acme.client.components.validation.ValidScore;
 import acme.client.components.validation.ValidString;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Review extends AbstractEntity {
+public class Claim extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
 
@@ -30,38 +29,28 @@ public class Review extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	@Valid
-	@Automapped
-	private ReviewCategory		category;
-
-	@Mandatory
-	@ValidString(max = 50)
-	@Automapped
-	private String				alias;
-
-	@Mandatory
 	@ValidMoment(past = true)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				postedMoment;
+	private Date				registrationMoment;
 
 	@Mandatory
-	@ValidString(max = 50)
+	@ValidEmail
 	@Automapped
-	private String				subject;
+	private String				email;
 
 	@Mandatory
 	@ValidString(max = 255)
 	@Automapped
-	private String				text;
+	private String				description;
 
-	@Optional
-	@ValidScore
-	@Automapped
-	private Double				score;
-
-	@Optional
+	@Mandatory
 	@Valid
 	@Automapped
-	private Boolean				recommended;
+	private claimType			type;
+
+	@Mandatory
+	@Valid
+	@Automapped
+	private Boolean				isAccepted;
 
 }
