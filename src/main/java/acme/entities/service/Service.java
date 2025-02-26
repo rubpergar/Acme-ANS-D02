@@ -43,7 +43,7 @@ public class Service extends AbstractEntity {
 	@Column(unique = true)
 	private String				promotionCode;
 
-	@Mandatory
+	@Optional
 	@ValidMoney
 	@Automapped
 	private Money				discountedMoney;
