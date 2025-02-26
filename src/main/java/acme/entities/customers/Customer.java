@@ -1,13 +1,14 @@
 
 package acme.entities.customers;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
 
+import acme.client.components.mappings.Automapped;
+import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
+import acme.client.components.validation.ValidNumber;
+import acme.client.components.validation.ValidString;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,24 +17,36 @@ import lombok.Setter;
 @Setter
 public class Customer {
 
-	@Id
-	@Pattern(regexp = "^[A-Z]{2,3}\\d{6}$", message = "Invalid identifier code format")
-	private String	id;
+	private static final long	serialVersionUID	= 1L;
 
-	@Pattern(regexp = "^\\+?\\d{6,15}$", message = "Invalid phone number format")
-	private String	phoneNumber;
+	@Mandatory
+	@ValidString(pattern = "^[A-Z]{2,3}\\d{6}$")
+	@Column(unique = true)
+	private String				identifier;
 
-	@Size(max = 255)
-	private String	physicalAddress;
+	@Mandatory
+	@ValidString(pattern = "^\\+?\\d{6,15}$")
+	@Automapped
+	private String				phoneNumber;
 
-	@Size(max = 50)
-	private String	city;
+	@Mandatory
+	@ValidString(max = 255)
+	@Automapped
+	private String				physicalAddress;
 
-	@Size(max = 50)
-	private String	country;
+	@Mandatory
+	@ValidString(max = 50)
+	@Automapped
+	private String				city;
+
+	@Mandatory
+	@ValidString(max = 50)
+	@Automapped
+	private String				country;
 
 	@Optional
-	@Max(500000)
-	private Integer	earnedPoints;
+	@ValidNumber(max = 500000)
+	@Automapped
+	private Integer				earnedPoints;
 
 }
