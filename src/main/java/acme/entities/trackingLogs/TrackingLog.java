@@ -1,10 +1,9 @@
 
-package acme.entities.claims;
+package acme.entities.trackingLogs;
 
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -12,17 +11,16 @@ import javax.validation.Valid;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
-import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidScore;
 import acme.client.components.validation.ValidString;
-import acme.entities.assistenceAgents.AssistanceAgent;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Claim extends AbstractEntity {
+public class TrackingLog extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
 
@@ -33,32 +31,27 @@ public class Claim extends AbstractEntity {
 	@Mandatory
 	@ValidMoment(past = true)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				registrationMoment;
+	private Date				lastUpdate;
 
 	@Mandatory
-	@ValidEmail
+	@ValidString(max = 50)
 	@Automapped
-	private String				email;
+	private String				stepUndergoing;
 
 	@Mandatory
-	@ValidString(max = 255)
+	@ValidScore		// Restringe un double de 0 a 100. ?????
 	@Automapped
-	private String				description;
-
-	@Mandatory
-	@Valid
-	@Automapped
-	private claimType			type;
+	private Double				resolutionPercentage;
 
 	@Mandatory
 	@Valid
 	@Automapped
 	private Boolean				isAccepted;
 
-	// They are registered by the assistance agent
 	@Mandatory
-	@Valid
-	@OneToOne(optional = false)
-	private AssistanceAgent		assistanceAgent;
+	@ValidString(max = 255)
+	@Automapped
+	private String				reason;
 
+	//Claims need to be tracked through tracking logs. -> debería crear una relación entre claim y trackingLogs??
 }
