@@ -21,7 +21,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class AirlineManager extends AbstractEntity {
+public class Manager extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
 
