@@ -36,7 +36,7 @@ public class Manager extends AbstractRole {
 	private String				identifierNumber;
 
 	@Mandatory
-	@ValidNumber(min = 0)
+	@ValidNumber(min = 0, max = 255)
 	@Automapped
 	private Integer				yearsOfExperience;
 
