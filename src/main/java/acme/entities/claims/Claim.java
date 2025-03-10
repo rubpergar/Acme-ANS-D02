@@ -41,7 +41,7 @@ public class Claim extends AbstractEntity {
 	private String				email;
 
 	@Mandatory
-	@ValidString(max = 255)
+	@ValidString(min = 1, max = 255)
 	@Automapped
 	private String				description;
 
