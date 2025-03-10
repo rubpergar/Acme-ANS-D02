@@ -4,8 +4,8 @@ package acme.entities.passenger;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.validation.Valid;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
@@ -14,7 +14,6 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidString;
-import acme.entities.booking.Booking;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,15 +24,8 @@ public class Passenger extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
-	@Mandatory	//??
-	@Valid
-	@ManyToOne
-	private Booking				booking;
-
-	//--------------------------------------------------------
-
 	@Mandatory
-	@ValidString(max = 255)
+	@ValidString(min = 1, max = 255)
 	@Automapped
 	private String				fullName;
 
@@ -49,11 +41,11 @@ public class Passenger extends AbstractEntity {
 
 	@Mandatory
 	@ValidMoment(past = true)
-	@Automapped //??
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date				dateOfBirth;
 
 	@Optional
-	@ValidString(max = 50)
+	@ValidString(min = 0, max = 50)
 	@Automapped
 	private String				specialNeeds;
 
