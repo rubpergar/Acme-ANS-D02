@@ -40,7 +40,7 @@ public class Manager extends AbstractEntity {
 	private Integer				yearsOfExperience;
 
 	@Mandatory
-	@ValidMoment
+	@ValidMoment(past = true)
 	@Temporal(TemporalType.DATE)
 	private Date				dateOfBirth;
 
