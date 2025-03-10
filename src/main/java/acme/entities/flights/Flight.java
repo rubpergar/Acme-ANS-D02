@@ -17,8 +17,8 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidString;
-import acme.entities.airlineManagers.Manager;
 import acme.entities.legs.Leg;
+import acme.realms.Manager;
 import lombok.Getter;
 import lombok.Setter;
 
