@@ -13,7 +13,7 @@ import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
-import acme.client.components.validation.ValidNumber;
+import acme.client.components.validation.ValidScore;
 import acme.client.components.validation.ValidString;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,7 +35,7 @@ public class Review extends AbstractEntity {
 	private ReviewCategory		category;
 
 	@Mandatory
-	@ValidString(min = 1, max = 50)
+	@ValidString(max = 50)
 	@Automapped
 	private String				alias;
 
@@ -45,17 +45,17 @@ public class Review extends AbstractEntity {
 	private Date				postedMoment;
 
 	@Mandatory
-	@ValidString(min = 1, max = 50)
+	@ValidString(max = 50)
 	@Automapped
 	private String				subject;
 
 	@Mandatory
-	@ValidString(min = 1, max = 255)
+	@ValidString(max = 255)
 	@Automapped
 	private String				text;
 
 	@Optional
-	@ValidNumber(min = 0, max = 10, integer = 2, fraction = 3)
+	@ValidScore
 	@Automapped
 	private Double				score;
 

@@ -1,5 +1,5 @@
 
-package acme.realms;
+package acme.entities.assistenceAgents;
 
 import java.util.Date;
 
@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import acme.client.components.basis.AbstractRole;
+import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Money;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
@@ -25,7 +25,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class AssistanceAgent extends AbstractRole {
+public class AssistanceAgent extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
 

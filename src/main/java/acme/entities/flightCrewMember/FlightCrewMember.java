@@ -15,6 +15,7 @@ import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
 import acme.entities.airline.Airline;
+import acme.entities.flights.Flight;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -50,6 +51,11 @@ public class FlightCrewMember extends AbstractEntity {
 	private CrewAvailabilityStatus	availabilityStatus;
 
 	@Mandatory
+	@Valid
+	@Automapped
+	private Airline					airline;
+
+	@Mandatory
 	@ValidMoney
 	@Automapped
 	private Money					salary;
@@ -68,6 +74,6 @@ public class FlightCrewMember extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private Airline					airline;
+	private Flight					flight;
 
 }
