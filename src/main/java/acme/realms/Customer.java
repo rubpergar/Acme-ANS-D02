@@ -1,10 +1,10 @@
 
-package acme.entities.customers;
+package acme.realms;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
-import acme.client.components.basis.AbstractEntity;
+import acme.client.components.basis.AbstractRole;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
@@ -16,7 +16,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Customer extends AbstractEntity {
+public class Customer extends AbstractRole {
 
 	private static final long	serialVersionUID	= 1L;
 
@@ -31,22 +31,22 @@ public class Customer extends AbstractEntity {
 	private String				phoneNumber;
 
 	@Mandatory
-	@ValidString(max = 255)
+	@ValidString(min = 1, max = 255)
 	@Automapped
 	private String				physicalAddress;
 
 	@Mandatory
-	@ValidString(max = 50)
+	@ValidString(min = 1, max = 50)
 	@Automapped
 	private String				city;
 
 	@Mandatory
-	@ValidString(max = 50)
+	@ValidString(min = 1, max = 50)
 	@Automapped
 	private String				country;
 
 	@Optional
-	@ValidNumber(max = 500000)
+	@ValidNumber(min = 0, max = 500000)
 	@Automapped
 	private Integer				earnedPoints;
 
