@@ -16,11 +16,11 @@ public class WeatherService {
 	private static final String	BASE_URL	= "https://api.openweathermap.org/data/2.5/weather";
 
 
-	public static JSONObject getWeather(final double lat, final double lon) throws JSONException {
+	public static JSONObject getWeather(final String city) throws JSONException {
 		if (WeatherService.API_KEY == null || WeatherService.API_KEY.isEmpty())
 			throw new IllegalStateException("API key is missing. Set OPENWEATHER_API_KEY environment variable.");
 
-		String url = String.format("%s?lat=%.4f&lon=%.4f&appid=%s&units=metric", WeatherService.BASE_URL, lat, lon, WeatherService.API_KEY);
+		String url = String.format("%s?q=%s&appid=%s&units=metric", WeatherService.BASE_URL, city, WeatherService.API_KEY);
 
 		HttpClient client = HttpClient.newHttpClient();
 		HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).build();
@@ -37,12 +37,11 @@ public class WeatherService {
 	}
 
 	public static void main(final String[] args) throws JSONException {
-		double lat = 37.3886;
-		double lon = -5.9823;
+		String city = "Sevilla";
 
-		JSONObject weatherData = WeatherService.getWeather(lat, lon);
+		JSONObject weatherData = WeatherService.getWeather(city);
 		if (weatherData != null) {
-			System.out.println("Clima en Sevilla:");
+			System.out.println("Clima en " + city + ":");
 
 			JSONObject mainData = weatherData.getJSONObject("main");
 			System.out.println("Temperatura actual: " + mainData.getDouble("temp") + "°C");
