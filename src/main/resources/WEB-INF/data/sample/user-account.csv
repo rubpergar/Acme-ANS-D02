@@ -5,3 +5,6 @@ user-account-consumer-03,true,"UserIdentity{name: 'Manolo', surname: '之乎路�
 user-account-provider-01,true,"UserIdentity{name: 'Laurel', surname: 'Provider', email: 'laurel@acme.com'}",provider1,provider1
 user-account-provider-02,true,"UserIdentity{name: 'Martina', surname: 'коза თხა', email: 'martina@acme.com'}",provider2,provider2
 user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטיח Æløzå', email: 'antonia@acme.com'}",provider3,provider3
+user-account-agent-01,true,"UserIdentity{name: 'Alba', surname: 'Milan', email:'alba@acme.com'}",agent1,agent1
+user-account-agent-02,true,"UserIdentity{name: 'Clara', surname: 'Prieto', email:'clara@acme.com'}",agent2,agent2
+user-account-agent-03,true,"UserIdentity{name: 'Blanca', surname: 'Lorente', email: 'blanca@acme.com'}",agent3,agent3
