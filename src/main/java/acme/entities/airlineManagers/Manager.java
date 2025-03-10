@@ -15,6 +15,7 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
+import acme.client.components.validation.ValidUrl;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -35,17 +36,17 @@ public class Manager extends AbstractEntity {
 	private String				identifierNumber;
 
 	@Mandatory
-	@ValidNumber
+	@ValidNumber(min = 0)
 	@Automapped
 	private Integer				yearsOfExperience;
 
 	@Mandatory
-	@ValidMoment
+	@ValidMoment(past = true)
 	@Temporal(TemporalType.DATE)
 	private Date				dateOfBirth;
 
 	@Optional
-	@ValidString
+	@ValidUrl
 	@Automapped
 	private String				pictureLink;
 

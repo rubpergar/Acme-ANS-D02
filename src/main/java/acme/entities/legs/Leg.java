@@ -49,7 +49,7 @@ public class Leg extends AbstractEntity {
 	private Date				scheduledArrival;
 
 	@Mandatory
-	@ValidNumber
+	@ValidNumber(min = 0)
 	@Automapped
 	private Double				duration;
 
