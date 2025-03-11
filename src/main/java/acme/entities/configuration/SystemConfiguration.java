@@ -3,6 +3,7 @@ package acme.entities.configuration;
 
 import javax.persistence.Entity;
 
+import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidString;
@@ -12,7 +13,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class SystemConfiguration {
+public class SystemConfiguration extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
 
