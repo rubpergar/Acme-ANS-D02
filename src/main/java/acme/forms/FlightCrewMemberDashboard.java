@@ -3,7 +3,7 @@ package acme.forms;
 
 import acme.client.components.basis.AbstractForm;
 import acme.entities.flightAssignment.FlightAssignment;
-import acme.entities.flightCrewMember.FlightCrewMember;
+import acme.realms.flightCrewMember.FlightCrewMember;
 import lombok.Getter;
 import lombok.Setter;
 
