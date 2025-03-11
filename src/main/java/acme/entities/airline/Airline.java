@@ -32,7 +32,7 @@ public class Airline extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	@ValidString(max = 50)
+	@ValidString(min = 1, max = 50)
 	@Automapped
 	private String				name;
 
@@ -62,7 +62,7 @@ public class Airline extends AbstractEntity {
 	private String				email;
 
 	@Optional
-	@ValidString(pattern = "^\\+?\\d{6,15}$", message = "{validation.airline.phone}")
+	@ValidString(pattern = "^\\+?\\d{6,15}$", message = "{validation.airline.phone}") //definir restriccion para phone 
 	@Automapped
 	private String				phone;
 

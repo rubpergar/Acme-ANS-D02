@@ -29,10 +29,10 @@ public class Review extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@Mandatory
-	@Valid
-	@Automapped
-	private ReviewCategory		category;
+	//	@Mandatory
+	//	@Valid
+	//	@Automapped
+	//	private ReviewCategory		category;
 
 	@Mandatory
 	@ValidString(min = 1, max = 50)
@@ -55,7 +55,7 @@ public class Review extends AbstractEntity {
 	private String				text;
 
 	@Optional
-	@ValidNumber(min = 0, max = 10, integer = 2, fraction = 3)
+	@ValidNumber(min = 0, max = 10, integer = 2, fraction = 2)
 	@Automapped
 	private Double				score;
 
