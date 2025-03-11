@@ -17,8 +17,8 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidString;
-import acme.entities.airlineManagers.Manager;
 import acme.entities.legs.Leg;
+import acme.realms.Manager;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -35,7 +35,7 @@ public class Flight extends AbstractEntity {
 
 	//a tag that highlights some feature of the flight such as "the fastest", "the cheapest" (up to 50 characters)
 	@Mandatory
-	@ValidString(max = 50)
+	@ValidString(min = 1, max = 50)
 	@Automapped
 	private String				tag;  //deberia tener formato de "The.."??
 
@@ -58,14 +58,14 @@ public class Flight extends AbstractEntity {
 	private Money				cost;
 
 	@Optional
-	@ValidString(max = 255)
+	@ValidString(min = 0, max = 255)
 	@Automapped
 	private String				description;
 
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private Manager		airlineManager;
+	private Manager				airlineManager;
 
 	@Mandatory
 	@Valid
