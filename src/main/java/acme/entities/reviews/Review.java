@@ -30,11 +30,6 @@ public class Review extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	@Valid
-	@Automapped
-	private ReviewCategory		category;
-
-	@Mandatory
 	@ValidString(min = 1, max = 50)
 	@Automapped
 	private String				alias;
@@ -43,6 +38,11 @@ public class Review extends AbstractEntity {
 	@ValidMoment(past = true)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				postedMoment;
+
+	//	@Mandatory
+	//	@Valid												//el profesor le dijo a cici que hiciera eso
+	//	@Automapped											// y ahora el tio dice que no hay que hacer eso
+	//	private ReviewCategory		category;
 
 	@Mandatory
 	@ValidString(min = 1, max = 50)
@@ -55,7 +55,7 @@ public class Review extends AbstractEntity {
 	private String				text;
 
 	@Optional
-	@ValidNumber(min = 0, max = 10, integer = 2, fraction = 3)
+	@ValidNumber(min = 0, max = 10, integer = 2, fraction = 2)
 	@Automapped
 	private Double				score;
 
