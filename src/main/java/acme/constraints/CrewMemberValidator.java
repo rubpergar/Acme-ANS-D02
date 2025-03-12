@@ -10,11 +10,11 @@ import acme.client.helpers.StringHelper;
 import acme.realms.flightCrewMember.FlightCrewMember;
 
 @Validator
-public class CrewMemberValidator extends AbstractValidator<ValidCustomer, FlightCrewMember> {
+public class CrewMemberValidator extends AbstractValidator<ValidCrewMember, FlightCrewMember> {
 	// ConstraintValidator interface ------------------------------------------
 
 	@Override
-	public void initialize(final ValidCustomer annotation) {
+	public void initialize(final ValidCrewMember annotation) {
 		assert annotation != null;
 	}
 
