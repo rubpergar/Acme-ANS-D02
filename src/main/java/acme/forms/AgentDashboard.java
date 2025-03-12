@@ -1,8 +1,6 @@
 
 package acme.forms;
 
-import java.util.Date;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,9 +18,7 @@ public class AgentDashboard {
 
 	Double						rejectedClaimsRatio;
 
-	Date						top1MonthMoreClaims;
-	Date						top2MonthMoreClaims;		//●	The top three months with the highest number of claims.  ??
-	Date						top3MonthMoreClaims;
+	String						top3Months;
 
 	Double						avgLogsInClaims;
 	Double						minLogsInClaims;

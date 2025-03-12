@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.datatypes.Money;
@@ -41,12 +42,13 @@ public class AssistanceAgent extends AbstractRole {
 	private String				code;
 
 	@Mandatory
-	@ValidString(max = 255)
+	@ValidString(min = 1, max = 255)
 	@Automapped
 	private String				languages;
+
 	@Mandatory
+	@Valid
 	@ManyToOne(optional = false)
-	@Automapped
 	private Airline				airline;
 
 	@Mandatory
@@ -55,7 +57,7 @@ public class AssistanceAgent extends AbstractRole {
 	private Date				moment;
 
 	@Optional
-	@ValidString(max = 255)
+	@ValidString(min = 1, max = 255)
 	@Automapped
 	private String				bio;
 
