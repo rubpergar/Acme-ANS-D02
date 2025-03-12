@@ -3,6 +3,8 @@ validation.airline.codeIATA = The code must be formed by 3 capital letters, wher
 
 acme.validation.crew-member.invalid-identifier.message=The identifier is invalid. It must start with their initials (2 or 3 uppercase letters) followed by 6 digits.
 
+acme.validation.activity-log.invalid-moment.message=Activity log can't be registered because its corresponding leg hasn't finished yet.
+
 acme.validation.leg.invalid-scheduled-arrival.message=The scheduled arrival time must be after the scheduled departure time.
 acme.validation.leg.invalid-flight-number.message=The flight number must start with the airline's IATA code
 

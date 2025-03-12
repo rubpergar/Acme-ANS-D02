@@ -3,6 +3,8 @@ validation.airline.codeIATA = El código deberá estar formado por 3 letras en m
 
 acme.validation.crew-member.invalid-identifier.message=El identificador del miembro es inválido. Debe comenzar con sus iniciales (2 o 3 letras mayúsculas), seguidas de 6 dígitos.
 
+acme.validation.activity-log.invalid-moment.message=El registro de actividad no se puede realizar debido a que su correspondiente tramo no ha concluido aún.
+
 acme.validation.leg.invalid-scheduled-arrival.message=La hora de llegada debe ser posterior a la hora de salida programada.
 acme.validation.leg.invalid-flight-number.message=El número de vuelo debe comenzar con el código IATA de la aerolínea
 
