@@ -4,7 +4,7 @@ package acme.entities.claims;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -58,7 +58,7 @@ public class Claim extends AbstractEntity {
 	// They are registered by the assistance agent
 	@Mandatory
 	@Valid
-	@OneToOne(optional = false)
+	@ManyToOne(optional = false)
 	private AssistanceAgent		assistanceAgent;
 
 }
