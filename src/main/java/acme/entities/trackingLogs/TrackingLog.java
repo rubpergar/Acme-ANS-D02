@@ -4,6 +4,7 @@ package acme.entities.trackingLogs;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -14,6 +15,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidScore;
 import acme.client.components.validation.ValidString;
+import acme.entities.claims.Claim;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,6 +29,11 @@ public class TrackingLog extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
+
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private Claim				claim;
 
 	@Mandatory
 	@ValidMoment(past = true)
@@ -53,5 +60,4 @@ public class TrackingLog extends AbstractEntity {
 	@Automapped
 	private String				reason;
 
-	//Claims need to be tracked through tracking logs. -> debería crear una relación entre claim y trackingLogs??
 }
