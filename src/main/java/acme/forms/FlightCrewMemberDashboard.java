@@ -1,6 +1,8 @@
 
 package acme.forms;
 
+import java.util.List;
+
 import acme.client.components.basis.AbstractForm;
 import acme.entities.flightAssignment.FlightAssignment;
 import acme.realms.flightCrewMember.FlightCrewMember;
@@ -17,17 +19,17 @@ public class FlightCrewMemberDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	String						last5Destinations;
+	List<String>				last5Destinations;
 
 	int							legsWithIndicentSeverityBetween0and3;
 	int							legsWithIndicentSeverityBetween4and7;
 	int							legsWithIndicentSeverityBetween8and10;
 
-	FlightCrewMember			lastFlightCrewMembers;
+	List<FlightCrewMember>		lastFlightCrewMembers;
 
-	FlightAssignment			confirmedFlightAssignments;
-	FlightAssignment			pendingFlightAssignments;
-	FlightAssignment			cancelledFlightAssignments;
+	List<FlightAssignment>		confirmedFlightAssignments;
+	List<FlightAssignment>		pendingFlightAssignments;
+	List<FlightAssignment>		cancelledFlightAssignments;
 
 	Double						avgFlightAssignmentsLastMonth;
 	Double						minFlightAssignmentsLastMonth;
