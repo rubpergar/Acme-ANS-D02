@@ -1,54 +1,49 @@
-key,category,alias,postedMoment,subject,text,score,recommended
-# category
-review-01,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-02,CUSTOMER_SERVICE,lorem,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-03,AIRLINE_EXPERIENCE,lorem,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-04,FLIGHT_EXPERIENCE,lorem,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+key,alias,postedMoment,subject,text,score,recommended
 #  alias
-review-05,AIRPORT_CLEANLINESS,L,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-06,AIRPORT_CLEANLINESS,Lo,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-07,AIRPORT_CLEANLINESS,"Lorem ipsum dolor sit amet, consectetur adipiscin",2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-08,AIRPORT_CLEANLINESS,"Lorem ipsum dolor sit amet, consectetur adipiscing",2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-09,AIRPORT_CLEANLINESS,โลเร็ม อิปซัม,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-10,AIRPORT_CLEANLINESS,لوريم إيبسوم,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-11,AIRPORT_CLEANLINESS,洛伦·伊普森,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-12,AIRPORT_CLEANLINESS,<marquee>Hacked</marquee>,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-13,AIRPORT_CLEANLINESS,<script>alert(‘Hacked!’);</script>,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-14,AIRPORT_CLEANLINESS,' or 'A' = 'A ,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-01,L,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-02,Lo,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-03,"Lorem ipsum dolor sit amet, consectetur adipiscin",2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-04,"Lorem ipsum dolor sit amet, consectetur adipiscing",2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-05,โลเร็ม อิปซัม,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-06,لوريم إيبسوم,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-07,洛伦·伊普森,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-08,<marquee>Hacked</marquee>,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-09,<script>alert(‘Hacked!’);</script>,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-10,' or 'A' = 'A ,2012/07/02 00:00,lorem,lorem,5.00,TRUE
 # postedMoment
-review-15,AIRPORT_CLEANLINESS,lorem,2000/01/01 00:00,lorem,lorem,5.00,TRUE
-review-16,AIRPORT_CLEANLINESS,lorem,2000/01/01 00:01,lorem,lorem,5.00,TRUE
-review-17,AIRPORT_CLEANLINESS,lorem,2022/07/29 23:59,lorem,lorem,5.00,TRUE
-review-18,AIRPORT_CLEANLINESS,lorem,2022/07/30 00:00,lorem,lorem,5.00,TRUE
+review-11,lorem,2000/01/01 00:00,lorem,lorem,5.00,TRUE
+review-12,lorem,2000/01/01 00:01,lorem,lorem,5.00,TRUE
+review-13,lorem,2024/12/31 23:59,lorem,lorem,5.00,TRUE
+review-14,lorem,2025/01/01 00:00,lorem,lorem,5.00,TRUE
 # subject
-review-19,AIRPORT_CLEANLINESS,L,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-20,AIRPORT_CLEANLINESS,Lo,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-21,AIRPORT_CLEANLINESS,"Lorem ipsum dolor sit amet, consectetur adipiscin",2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-22,AIRPORT_CLEANLINESS,"Lorem ipsum dolor sit amet, consectetur adipiscing",2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-23,AIRPORT_CLEANLINESS,โลเร็ม อิปซัม,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-24,AIRPORT_CLEANLINESS,لوريم إيبسوم,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-25,AIRPORT_CLEANLINESS,洛伦·伊普森,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-26,AIRPORT_CLEANLINESS,<marquee>Hacked</marquee>,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-27,AIRPORT_CLEANLINESS,<script>alert(‘Hacked!’);</script>,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-28,AIRPORT_CLEANLINESS,' or 'A' = 'A ,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-15,L,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-16,Lo,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-17,"Lorem ipsum dolor sit amet, consectetur adipiscin",2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-18,"Lorem ipsum dolor sit amet, consectetur adipiscing",2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-19,โลเร็ม อิปซัม,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-20,لوريم إيبسوم,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-21,洛伦·伊普森,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-22,<marquee>Hacked</marquee>,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-23,<script>alert(‘Hacked!’);</script>,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-24,' or 'A' = 'A ,2012/07/02 00:00,lorem,lorem,5.00,TRUE
 # text
-review-29,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,L,5.00,TRUE
-review-30,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,Lo,5.00,TRUE
-review-31,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",5.00,TRUE
-review-32,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",5.00,TRUE
-review-33,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,โลเร็ม อิปซัม,5.00,TRUE
-review-34,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,لوريم إيبسوم,5.00,TRUE
-review-35,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,洛伦·伊普森,5.00,TRUE
-review-36,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,<marquee>Hacked</marquee>,5.00,TRUE
-review-37,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,<script>alert(‘Hacked!’);</script>,5.00,TRUE
-review-38,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,' or 'A' = 'A ,5.00,TRUE
+review-25,lorem,2012/07/02 00:00,lorem,L,5.00,TRUE
+review-26,lorem,2012/07/02 00:00,lorem,Lo,5.00,TRUE
+review-27,lorem,2012/07/02 00:00,lorem,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",5.00,TRUE
+review-28,lorem,2012/07/02 00:00,lorem,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",5.00,TRUE
+review-29,lorem,2012/07/02 00:00,lorem,โลเร็ม อิปซัม,5.00,TRUE
+review-30,lorem,2012/07/02 00:00,lorem,لوريم إيبسوم,5.00,TRUE
+review-31,lorem,2012/07/02 00:00,lorem,洛伦·伊普森,5.00,TRUE
+review-32,lorem,2012/07/02 00:00,lorem,<marquee>Hacked</marquee>,5.00,TRUE
+review-33,lorem,2012/07/02 00:00,lorem,<script>alert(‘Hacked!’);</script>,5.00,TRUE
+review-34,lorem,2012/07/02 00:00,lorem,' or 'A' = 'A ,5.00,TRUE
 # score
-review-39,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,lorem,0.00,TRUE
-review-40,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,lorem,0.01,TRUE
-review-41,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,lorem,9.99,TRUE
-review-42,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,lorem,10.00,TRUE
-review-43,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,lorem,,TRUE
+review-35,lorem,2012/07/02 00:00,lorem,lorem,0.00,TRUE
+review-36,lorem,2012/07/02 00:00,lorem,lorem,0.01,TRUE
+review-37,lorem,2012/07/02 00:00,lorem,lorem,9.99,TRUE
+review-38,lorem,2012/07/02 00:00,lorem,lorem,10.00,TRUE
+review-39,lorem,2012/07/02 00:00,lorem,lorem,,TRUE
 # recommended
-review-44,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,lorem,5.00,TRUE
-review-45,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,lorem,5.00,FALSE
-review-46,AIRPORT_CLEANLINESS,lorem,2012/07/02 00:00,lorem,lorem,5.00,
+review-40,lorem,2012/07/02 00:00,lorem,lorem,5.00,TRUE
+review-41,lorem,2012/07/02 00:00,lorem,lorem,5.00,FALSE
+review-42,lorem,2012/07/02 00:00,lorem,lorem,5.00,

@@ -40,8 +40,8 @@ public class Review extends AbstractEntity {
 	private Date				postedMoment;
 
 	//	@Mandatory
-	//	@Valid												//el profesor le dijo a cici que hiciera eso
-	//	@Automapped											// y ahora el tio dice que no hay que hacer eso
+	//	@Valid
+	//	@Automapped
 	//	private ReviewCategory		category;
 
 	@Mandatory
