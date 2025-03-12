@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>225</y>
+      <w>340</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Claim
+--
++ registrationMoment: Date{Mandatory, ValidMoment(past=true), Temporal(TemporalType.TIMESTAMP)}
++ email: String{Mandatory, ValidEmail, Automapped}
++ description: String{Mandatory, ValidString(min=1, max=255), Automapped}
++ type: ClaimType{Mandatory, Valid, Automapped}
++ isAccepted: Boolean{Mandatory, Valid, Automapped}
++assistanceAgent: AssistanceAgent{Mandatory, Valid, ManyToOne(optional=false)}
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>295</x>
+      <y>305</y>
+      <w>20</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>265</y>
+      <w>120</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>405</y>
+      <w>340</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+TrackingLog {ValidTrackingLog}
+--
++ lastUpdate: Date{Mandatory, ValidMoment(past=true), Temporal(TemporalType.TIMESTAMP)}
++ stepUndergoing: String(Mandatory, ValidString(min=1, max=50), Automapped}
++ resolutionPercentage: Double{Mandatory, ValidScore, Automapped}
++ status: TrackingLogStatus{Mandatory, Valid, Automapped}
++ resolution: String{Optiona, ValidString(min=0, max=1), Automapped}
++ claim: Claim{Mandatory, Valid, ManyToOne(optiona=false)}
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>300</y>
+      <w>20</w>
+      <h>115</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;210.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>235</x>
+      <y>385</y>
+      <w>125</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Airline
+--
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>885</x>
+      <y>310</y>
+      <w>95</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+ClaimType
+--
++ FLIGHT_ISSUES
++ LUGGAGE_ISSUES
++ SECURITY_INCIDENT
++ OTHER_ISSUES
+
+fg=BLACK
+bg=YELLOW</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>145</x>
+      <y>225</y>
+      <w>320</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+AssistanceAgent {ValidAssistanceAgent}
+--
++ code: String {Mandatory, ValidString(pattern="^[A-Z]{2,3}\\d{6}$"), Unique}
++ languages: String {Mandatory, ValidString(min=1,max=255), Automapped}
++ moment: Date {Mandatory, ValidMomement(past=true), Temporal(TemporalType.TIMESTAMP), }
++ bio: String {Oprional, ValidString(min=1,max=255), Automapped} 
++ salary: Money {Optional, ValidMoney(min=0, max=1000000), Automapped}
++ photo: String {Optional, ValidUrl, Automapped}
++ airline: Airline {Mandatory, Valid, ManyToOne(optional=false)}
+bg=PINK
+fg=BLACK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>870</x>
+      <y>490</y>
+      <w>95</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+TrackingLogStatus
+--
++ PENDING
++ ACCEPTED
++ REJECTED
+
+fg=BLACK
+bg=YELLOW</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>405</y>
+      <w>135</w>
+      <h>115</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+AgentDashBoard
+--
++ succesfullClaimsRatio: Double
++ rejectedClaimsRatio: Double
++ top3Months: String
++ avgLogsInClaim: Double
++ minLogsInClaim: Double
++ maxLogsInClaim: Double
++ devLogsInClaim: Double
++ avgClaimsAssistedLastMonth: Double
++ minClaimsAssistedLastMonth: Double
++ maxClaimsAssistedLastMonth: Double
++ devClaimsAssistedLastMonth: Double
+bg=LIGHT_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
