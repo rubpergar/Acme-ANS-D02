@@ -18,6 +18,7 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidAssistanceAgent;
 import acme.entities.airline.Airline;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,6 +26,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidAssistanceAgent
 public class AssistanceAgent extends AbstractRole {
 
 	// Serialisation version --------------------------------------------------
@@ -42,7 +44,6 @@ public class AssistanceAgent extends AbstractRole {
 	@ValidString(max = 255)
 	@Automapped
 	private String				languages;
-
 	@Mandatory
 	@ManyToOne(optional = false)
 	@Automapped
