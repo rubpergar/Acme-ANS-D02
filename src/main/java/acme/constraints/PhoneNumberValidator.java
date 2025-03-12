@@ -1,0 +1,31 @@
+
+package acme.constraints;
+
+import javax.validation.ConstraintValidatorContext;
+
+import acme.client.components.validation.AbstractValidator;
+
+public class PhoneNumberValidator extends AbstractValidator<ValidPhoneNumber, String> {
+	// ConstraintValidator interface ------------------------------------------
+
+	@Override
+	public void initialize(final ValidPhoneNumber annotation) {
+		assert annotation != null;
+	}
+
+	@Override
+	public boolean isValid(final String phoneNumber, final ConstraintValidatorContext context) {
+
+		boolean result;
+
+		boolean validFormat = true;
+
+		if (phoneNumber == null || phoneNumber == "" || !phoneNumber.matches("^\\+?\\d{6,15}$"))
+			validFormat = false;
+
+		super.state(context, validFormat, "phoneNumber", "acme.validation.wrongPhoneNumber.message");
+
+		result = !super.hasErrors(context);
+		return result;
+	}
+}

@@ -73,4 +73,4 @@ airport-63,airport,CHX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum","acme@
 airport-64,airport,CIX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum","acme@lorem-ipsum.org",+123456
 airport-65,airport,CJX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum","acme@lorem-ipsum.org",+987654321098765
 airport-66,airport,CKX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum","acme@lorem-ipsum.org",+112233445566
-airport-67,airport,CLX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum","acme@lorem-ipsum.org",null
+airport-67,airport,CLX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum","acme@lorem-ipsum.org",1234567

@@ -38,8 +38,8 @@ public class PromotionCodeValidator extends AbstractValidator<ValidPromotionCode
 		if (!yearSuffix.equals(currentYearLastTwoDigits))
 			validYear = false;
 
-		super.state(context, validFormat, "promotionCode", "javax.validation.constraints.NotPattern.message");
-		super.state(context, validYear, "promotionCode", "javax.validation.constraints.IncorrectDigits.message");
+		super.state(context, validFormat, "promotionCode", "acme.validation.PromotionCode.message");
+		super.state(context, validYear, "promotionCode", "acme.validation.PromotionCode.message");
 
 		result = !super.hasErrors(context);
 		return result;
