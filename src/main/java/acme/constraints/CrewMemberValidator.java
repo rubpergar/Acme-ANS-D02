@@ -19,19 +19,19 @@ public class CrewMemberValidator extends AbstractValidator<ValidCustomer, Flight
 	}
 
 	@Override
-	public boolean isValid(final FlightCrewMember customer, final ConstraintValidatorContext context) {
+	public boolean isValid(final FlightCrewMember crewMember, final ConstraintValidatorContext context) {
 		assert context != null;
 
 		boolean result;
 
-		if (customer == null)
+		if (crewMember == null)
 			return false;
 
-		String employeeCode = customer.getEmployeeCode();
+		String employeeCode = crewMember.getEmployeeCode();
 		if (employeeCode == null || !employeeCode.matches("^[A-Z]{2,3}\\d{6}$"))
 			return false;
 
-		DefaultUserIdentity identity = customer.getIdentity();
+		DefaultUserIdentity identity = crewMember.getIdentity();
 		if (identity == null)
 			return false;
 
@@ -47,7 +47,7 @@ public class CrewMemberValidator extends AbstractValidator<ValidCustomer, Flight
 
 		boolean validIdentifier = StringHelper.startsWith(employeeCode, initials, true);
 
-		super.state(context, validIdentifier, "identifierNumber", "acme.validation.manager.invalid-identifier.message");
+		super.state(context, validIdentifier, "identifierNumber", "acme.validation.crew-member.invalid-identifier.message");
 
 		result = !super.hasErrors(context);
 
