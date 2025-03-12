@@ -6,3 +6,4 @@ acme.validation.leg.invalid-flight-number.message=El número de vuelo debe comen
 acme.validation.flight.overlapping.message=Los tramos del vuelo no pueden solaparse
 acme.validation.manager.null-identity.message=La identidad del manager no puede estar vacía. Asegúrese de proporcionar un nombre y apellidos válidos.
 acme.validation.manager.invalid-identifier.message=El identificador del manager es inválido. Debe comenzar con sus iniciales (2 o 3 letras mayúsculas), seguidas de 6 dígitos.
+acme.validation.PromotionCode.message=El código de promoción no es válido. Debe seguir un patrón de cuatro letras mayúsculas seguidas de dos dígitos que representen el año actual.
