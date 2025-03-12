@@ -1,0 +1,41 @@
+key,registrationMoment,type,description,severityLevel,draftMode,key:flightAssignment
+# registrationMoment
+activity-log-01,2012/07/02 00:00,lorem,lorem,5,true,flight-assignment-01
+activity-log-02,2000/01/01 00:00,lorem,lorem,5,true,flight-assignment-01
+activity-log-03,2000/01/01 00:01,lorem,lorem,5,true,flight-assignment-01
+activity-log-04,2024/12/31 23:59,lorem,lorem,5,true,flight-assignment-01
+activity-log-05,2025/01/01 00:00,lorem,lorem,5,true,flight-assignment-01
+# type
+activity-log-06,2012/07/02 00:00,L,lorem,5,true,flight-assignment-01
+activity-log-07,2012/07/02 00:00,Lo,lorem,5,true,flight-assignment-01
+activity-log-08,2012/07/02 00:00,"Lorem ipsum dolor sit amet, consectetur adipiscin",lorem,5,true,flight-assignment-01
+activity-log-09,2012/07/02 00:00,"Lorem ipsum dolor sit amet, consectetur adipiscing",lorem,5,true,flight-assignment-01
+activity-log-10,2012/07/02 00:00,โลเร็ม อิปซัม,lorem,5,true,flight-assignment-01
+activity-log-11,2012/07/02 00:00,لوريم إيبسوم,lorem,5,true,flight-assignment-01
+activity-log-12,2012/07/02 00:00,洛伦·伊普森,lorem,5,true,flight-assignment-01
+activity-log-13,2012/07/02 00:00,<marquee>Hacked</marquee>,lorem,5,true,flight-assignment-01
+activity-log-14,2012/07/02 00:00,<script>alert(‘Hacked!’);</script>,lorem,5,true,flight-assignment-01
+activity-log-15,2012/07/02 00:00,' or 'A' = 'A ,lorem,5,true,flight-assignment-01
+# description
+activity-log-16,2012/07/02 00:00,lorem,L,5,true,flight-assignment-01
+activity-log-17,2012/07/02 00:00,lorem,Lo,5,true,flight-assignment-01
+activity-log-18,2012/07/02 00:00,lorem,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",5,true,flight-assignment-01
+activity-log-19,2012/07/02 00:00,lorem,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",5,true,flight-assignment-01
+activity-log-20,2012/07/02 00:00,lorem,โลเร็ม อิปซัม,5,true,flight-assignment-01
+activity-log-21,2012/07/02 00:00,lorem,لوريم إيبسوم,5,true,flight-assignment-01
+activity-log-22,2012/07/02 00:00,lorem,洛伦·伊普森,5,true,flight-assignment-01
+activity-log-23,2012/07/02 00:00,lorem,<marquee>Hacked</marquee>,5,true,flight-assignment-01
+activity-log-24,2012/07/02 00:00,lorem,<script>alert(‘Hacked!’);</script>,5,true,flight-assignment-01
+activity-log-25,2012/07/02 00:00,lorem,' or 'A' = 'A ,5,true,flight-assignment-01
+# severityLevel
+activity-log-26,2012/07/02 00:00,lorem,lorem,0,true,flight-assignment-01
+activity-log-27,2012/07/02 00:00,lorem,lorem,1,true,flight-assignment-01
+activity-log-28,2012/07/02 00:00,lorem,lorem,9,true,flight-assignment-01
+activity-log-29,2012/07/02 00:00,lorem,lorem,10,true,flight-assignment-01
+activity-log-30,2012/07/02 00:00,lorem,lorem,,true,flight-assignment-01
+# draftMode
+activity-log-31,2012/07/02 00:00,lorem,lorem,5,false,flight-assignment-01
+activity-log-32,2012/07/02 00:00,lorem,lorem,5,true,flight-assignment-01
+# flightAssignment
+activity-log-33,2012/07/02 00:00,lorem,lorem,5,true,flight-assignment-02
+activity-log-34,2012/07/02 00:00,lorem,lorem,5,true,
