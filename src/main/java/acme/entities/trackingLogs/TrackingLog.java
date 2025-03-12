@@ -12,6 +12,7 @@ import javax.validation.Valid;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
+import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidScore;
 import acme.client.components.validation.ValidString;
@@ -46,18 +47,18 @@ public class TrackingLog extends AbstractEntity {
 	private String				stepUndergoing;
 
 	@Mandatory
-	@ValidScore		// Restringe un double de 0 a 100. ?????
+	@ValidScore		// *?
 	@Automapped
 	private Double				resolutionPercentage;
 
 	@Mandatory
 	@Valid
 	@Automapped
-	private Boolean				isAccepted;
+	private TrackingLogStatus	status;
 
-	@Mandatory
-	@ValidString(min = 1, max = 255)
+	@Optional
+	@ValidString(min = 0, max = 255)
 	@Automapped
-	private String				reason;
+	private String				resolution;
 
 }
