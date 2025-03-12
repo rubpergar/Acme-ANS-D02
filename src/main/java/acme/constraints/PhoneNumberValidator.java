@@ -22,7 +22,7 @@ public class PhoneNumberValidator extends AbstractValidator<ValidPhoneNumber, St
 
 		boolean validFormat = true;
 
-		if (phoneNumber == null || phoneNumber == "" || !phoneNumber.matches("^\\+?\\d{6,15}$"))
+		if (!phoneNumber.matches("^\\+?\\d{6,15}$"))
 			validFormat = false;
 
 		super.state(context, validFormat, "phoneNumber", "acme.validation.wrongPhoneNumber.message");
