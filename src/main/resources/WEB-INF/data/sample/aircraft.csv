@@ -23,10 +23,10 @@ aircraft-19,lorem,<marquee>Hacked</marquee>,10,25000,ACTIVE,lorem
 aircraft-20,lorem,<script>alert(‘Hacked!’);</script>,10,25000,ACTIVE,lorem
 aircraft-21,lorem,' or 'A' = 'A,10,25000,ACTIVE,lorem
 # capacity
-aircraft-22,lorem,lorem12,9,25000,ACTIVE,lorem
-aircraft-23,lorem,lorem13,1,25000,ACTIVE,lorem
-aircraft-24,lorem,lorem14,3,25000,ACTIVE,lorem
-aircraft-25,lorem,lorem15,5,25000,ACTIVE,lorem
+aircraft-22,lorem,lorem12,1,25000,ACTIVE,lorem
+aircraft-23,lorem,lorem13,2,25000,ACTIVE,lorem
+aircraft-24,lorem,lorem14,254,25000,ACTIVE,lorem
+aircraft-25,lorem,lorem15,255,25000,ACTIVE,lorem
 # cargoWeight
 aircraft-26,lorem,lorem16,10,2000,ACTIVE,lorem
 aircraft-27,lorem,lorem17,10,2001,ACTIVE,lorem

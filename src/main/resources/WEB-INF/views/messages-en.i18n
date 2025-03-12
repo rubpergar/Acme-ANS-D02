@@ -1,8 +1,18 @@
-# Airline
 validation.airline.phone = The phone number can start with '+' and must have between 6 and 15 digits without blank spaces or special characters
 validation.airline.codeIATA = The code must be formed by 3 capital letters, where the last letter is typically an "X"
+
+acme.validation.crew-member.invalid-identifier.message=The identifier is invalid. It must start with their initials (2 or 3 uppercase letters) followed by 6 digits.
+
+acme.validation.activity-log.invalid-moment.message=Activity log can't be registered because its corresponding leg hasn't finished yet.
+
 acme.validation.leg.invalid-scheduled-arrival.message=The scheduled arrival time must be after the scheduled departure time.
 acme.validation.leg.invalid-flight-number.message=The flight number must start with the airline's IATA code
+
 acme.validation.flight.overlapping.message=Flight legs must not overlap
+
 acme.validation.manager.null-identity.message=The manager's identity cannot be null. Please provide a valid first and last name.
 acme.validation.manager.invalid-identifier.message=The manager's identifier is invalid. It must start with their initials (2 or 3 uppercase letters) followed by 6 digits.
+
+acme.validation.PromotionCode.message=The promotion code is invalid. It must follow a pattern of four uppercase letters followed by two digits representing the current year.
+
+acme.validation.wrongPhoneNumber.message=The phone number is invalid. It must follow a pattern. This pattern matches an optional + followed by 6 to 15 digits, ensuring the entire string consists only of numbers.

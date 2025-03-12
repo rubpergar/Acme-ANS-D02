@@ -1,8 +1,18 @@
-# Airline
 validation.airline.phone = El número de teléfono puede empezar con '+' y debe tener entre 6 y 15 dígitos sin espacios en blanco ni caracteres especiales
 validation.airline.codeIATA = El código deberá estar formado por 3 letras en mayúscula, donde la útlima letra será normalmente una "X"
+
+acme.validation.crew-member.invalid-identifier.message=El identificador del miembro es inválido. Debe comenzar con sus iniciales (2 o 3 letras mayúsculas), seguidas de 6 dígitos.
+
+acme.validation.activity-log.invalid-moment.message=El registro de actividad no se puede realizar debido a que su correspondiente tramo no ha concluido aún.
+
 acme.validation.leg.invalid-scheduled-arrival.message=La hora de llegada debe ser posterior a la hora de salida programada.
 acme.validation.leg.invalid-flight-number.message=El número de vuelo debe comenzar con el código IATA de la aerolínea
+
 acme.validation.flight.overlapping.message=Los tramos del vuelo no pueden solaparse
+
 acme.validation.manager.null-identity.message=La identidad del manager no puede estar vacía. Asegúrese de proporcionar un nombre y apellidos válidos.
 acme.validation.manager.invalid-identifier.message=El identificador del manager es inválido. Debe comenzar con sus iniciales (2 o 3 letras mayúsculas), seguidas de 6 dígitos.
+
+acme.validation.PromotionCode.message=El código de promoción no es válido. Debe seguir un patrón de cuatro letras mayúsculas seguidas de dos dígitos que representen el año actual.
+
+acme.validation.wrongPhoneNumber.message=El número de teléfono no es válido. Debe seguir un patrón. Este patrón coincide con un + opcional seguido de 6 a 15 dígitos, asegurando que toda la cadena consista solo en números.

@@ -40,8 +40,8 @@ airline-34,airline,BEX,"http://lorem.com/ipsum",LOW_COST,2012/07/02 00:00,"acme@
 # foundationMoment
 airline-35,airline,BFX,"http://lorem.com/ipsum",LUXURY,2000/01/01 0:00,"acme@lorem-ipsum.org",+123456789
 airline-36,airline,BGX,"http://lorem.com/ipsum",LUXURY,2000/01/01 0:01,"acme@lorem-ipsum.org",+123456789
-airline-37,airline,BHX,"http://lorem.com/ipsum",LUXURY,2022/07/29 23:59,"acme@lorem-ipsum.org",+123456789
-airline-38,airline,BIX,"http://lorem.com/ipsum",LUXURY,2022/07/30 0:00,"acme@lorem-ipsum.org",+123456789
+airline-37,airline,BHX,"http://lorem.com/ipsum",LUXURY,2024/12/31 23:59,"acme@lorem-ipsum.org",+123456789
+airline-38,airline,BIX,"http://lorem.com/ipsum",LUXURY,2025/01/01 0:00,"acme@lorem-ipsum.org",+123456789
 # email
 airline-40,airline,BKX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"a@b.e",+123456789
 airline-41,airline,BLX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"a@b.es",+123456789
@@ -55,4 +55,4 @@ airline-47,airline,BRX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lo
 airline-48,airline,BSX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+123456
 airline-49,airline,BTX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+987654321098765
 airline-50,airline,BUX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",+112233445566
-airline-51,airline,BVX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",
+airline-51,airline,BVX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",123456

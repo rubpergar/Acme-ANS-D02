@@ -14,6 +14,8 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
+import acme.constraints.ValidCrewMember;
+import acme.constraints.ValidPhoneNumber;
 import acme.entities.airline.Airline;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,6 +23,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidCrewMember
 public class FlightCrewMember extends AbstractRole {
 
 	// Serialisation version --------------------------------------------------
@@ -35,12 +38,12 @@ public class FlightCrewMember extends AbstractRole {
 	private String					employeeCode;
 
 	@Mandatory
-	@ValidString(pattern = "^\\+?\\d{6,15}$", message = "{validation.airline.phone}")
+	@ValidPhoneNumber
 	@Automapped
 	private String					phone;
 
 	@Mandatory
-	@ValidString
+	@ValidString(min = 1, max = 255)
 	@Automapped
 	private String					languageSkills;
 
@@ -50,16 +53,14 @@ public class FlightCrewMember extends AbstractRole {
 	private CrewAvailabilityStatus	availabilityStatus;
 
 	@Mandatory
-	@ValidMoney
+	@ValidMoney(min = 0, max = 1000000)
 	@Automapped
 	private Money					salary;
 
 	@Optional
-	@ValidNumber
+	@ValidNumber(min = 0, max = 100)
 	@Automapped
 	private Integer					yearsExperience;
-
-	private boolean					draftMode;
 
 	// Derived attributes -----------------------------------------------------
 
