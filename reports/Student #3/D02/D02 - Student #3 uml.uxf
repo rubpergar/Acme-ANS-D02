@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>336</y>
+      <w>406</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+FlightAssignment
+--
++ duty: FlightAssignmentDuty {Mandatory, Valid, Automapped}
++ lastUpdateMoment: Date {Mandatory, ValidMoment(past=true), Temporal(TIMESTAMP)}
++ status: FlightAssignmentStatus {Mandatory, Valid, Automapped}
++ remarks: String {Optional, ValidString(min=0, max = 255), Automapped}
++ draftMode: Boolean
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>336</y>
+      <w>112</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+FlightAssignmentDuty
+--
++ PILOT
++ CO_PILOT
++ LEAD_ATTENDANT
++ CABIN_ATTENDANT
+bg=LIGHT_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>434</y>
+      <w>112</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+FlightAssignmentStatus
+--
++ CONFIRMED
++ PENDING
++ CANCELLED
+bg=LIGHT_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>511</y>
+      <w>406</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+ActivityLog {ValidActivityLog}
+--
++ registrationMoment: Date {Mandatory, ValidMoment(past=true), Temporal(TIMESTAMP)}
++ type: String {Mandatory, ValidString(min=1, max = 50), Automapped}
++ description: String {Mandatory, ValidString(min=1, max = 255), Automapped}
++ severityLevel: Integer {Optional, ValidNumber(min = 0, max = 10), Automapped}
++ draftMode: Boolean
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>581</x>
+      <y>420</y>
+      <w>77</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Belogns to ^
+lt=&lt;-
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>931</x>
+      <y>532</y>
+      <w>70</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Leg
+--
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>784</x>
+      <y>539</y>
+      <w>161</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Associated with &gt;
+lt=&lt;-
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>364</x>
+      <y>140</y>
+      <w>455</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+FlightCrewMember {ValidCrewMember}
+--
++ employeeCode: String {Mandatory, ValidString(pattern = "^[A-Z]{2-3}\\d{6}$"), Column(unique = true)}
++ phone: String {Mandatory, ValidPhoneNumber, Automapped}
++ languageSkills: String {Mandatory, ValidString(min = 1, max = 255), Automapped}
++ availabilityStatus: CrewAvailabilityStatus {Mandatory, Valid, Automapped}
++ salary: Money {Mandatory, ValidMoney(min = 0, max = 1000000), Automapped}
++ yearsExperience: Integer {Optional, ValidNumber(min = 0, max = 100), Automapped}
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>469</x>
+      <y>630</y>
+      <w>245</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Constraint&gt;&gt;
+ValidActivityLog
+--
++ it can only be registered after the corresponding
+   leg has taken place.
+bg=RED</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>238</y>
+      <w>112</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+CrewAvailabilityStatus
+--
++ AVAILABLE
++ ON_VACATION
++ ON_LEAVE
+bg=LIGHT_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>581</x>
+      <y>238</y>
+      <w>84</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Assigned to ^
+lt=&lt;-
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>42</y>
+      <w>245</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Constraint&gt;&gt;
+ValidCrewMember
+--
++ the employee code letters must correspond to the
+   initial letters of the name and surname of the user.
+bg=RED</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>931</x>
+      <y>175</y>
+      <w>70</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Airline
+--
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>812</x>
+      <y>182</y>
+      <w>133</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Works for &gt;
+lt=&lt;-
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>28</x>
+      <y>301</y>
+      <w>252</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+FlightCrewMemberDashboard
+--
++ last5Destinations: List&lt;String&gt;
++ legsWithIndicentSeverityBetween0and3: int
++ legsWithIndicentSeverityBetween4and7: int
++ legsWithIndicentSeverityBetween8and10: int
++ lastFlightCrewMembers: List&lt;FlightCrewMember&gt;
++ confirmedFlightAssignments: List&lt;FlightAssignment&gt;
++ pendingFlightAssignments: List&lt;FlightAssignment&gt;
++ cancelledFlightAssignments: List&lt;FlightAssignment&gt;
++ avgFlightAssignmentsLastMonth: Double
++ minFlightAssignmentsLastMonth: Double
++ maxFlightAssignmentsLastMonth: Double
++ devFlightAssignmentsLastMonth: Double
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
