@@ -1,7 +1,7 @@
 
 package acme.forms.flightsStatus;
 
-public enum FlighStatus {
+public enum FlightStatus {
 	SCHEDULED, ACTIVE, LANDED, CANCELLED, INCIDENT, DIVERTED
 
 }

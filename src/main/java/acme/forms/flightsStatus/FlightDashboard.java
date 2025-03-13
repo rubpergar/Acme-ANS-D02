@@ -21,7 +21,7 @@ public class FlightDashboard extends AbstractForm {
 
 	String						flightNumber;
 	String						airlineName;
-	FlighStatus					flightStatus; //scheduled, active, landed, cancelled, incident,diverted
+	FlightStatus				flightStatus; //scheduled, active, landed, cancelled, incident,diverted
 	Date						flightDate;
 	String						departureAirport;
 	String						arrivalAirport;
