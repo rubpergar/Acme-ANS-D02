@@ -32,20 +32,19 @@ public class LegValidator extends AbstractValidator<ValidLeg, Leg> {
 			super.state(context, false, "*", "javax.validation.constraints.NotNull.message");
 			return false;
 		} else {
-			{
-				boolean isScheduleCorrect = MomentHelper.isBefore(leg.getScheduledDeparture(), leg.getScheduledArrival());
-				super.state(context, isScheduleCorrect, "scheduledArrival", "acme.validation.leg.invalid-scheduled-arrival.message");
-			}
-			{
-				boolean isFlightNumberCorrect = true;
 
-				if (leg.getAirline() != null && leg.getAirline().getCodeIATA() != null) {
-					String airlineIATACode = leg.getAirline().getCodeIATA();
-					isFlightNumberCorrect = StringHelper.startsWith(leg.getFlightNumber(), airlineIATACode, true);
-				}
+			boolean isScheduleCorrect = MomentHelper.isBefore(leg.getScheduledDeparture(), leg.getScheduledArrival());
+			super.state(context, isScheduleCorrect, "scheduledArrival", "acme.validation.leg.invalid-scheduled-arrival.message");
 
-				super.state(context, isFlightNumberCorrect, "flightNumber", "acme.validation.leg.invalid-flight-number.message");
+			boolean isFlightNumberCorrect = true;
+
+			if (isScheduleCorrect && leg.getAirline() != null && leg.getAirline().getCodeIATA() != null) {
+				String airlineIATACode = leg.getAirline().getCodeIATA();
+				isFlightNumberCorrect = StringHelper.startsWith(leg.getFlightNumber(), airlineIATACode, true);
 			}
+
+			super.state(context, isFlightNumberCorrect, "flightNumber", "acme.validation.leg.invalid-flight-number.message");
+
 		}
 
 		result = !super.hasErrors(context);
