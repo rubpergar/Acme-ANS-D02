@@ -41,7 +41,7 @@ aircraft-33,lorem,lorem23,10,25000,ACTIVE,Lo,airline-01
 aircraft-34,lorem,lorem24,10,25000,ACTIVE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",airline-01
 aircraft-35,lorem,lorem25,10,25000,ACTIVE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",airline-01
 aircraft-36,lorem,lorem26,10,25000,ACTIVE,โลเร็ม อิปซัม,airline-01
-aircraft-37,lorem,lorem27,10,25000,ACTIVE,,airline-01لوريم إيبسوم
+aircraft-37,lorem,lorem27,10,25000,ACTIVE,لوريم إيبسوم,airline-01
 aircraft-38,lorem,lorem28,10,25000,ACTIVE,洛伦·伊普森,airline-01
 aircraft-39,lorem,lorem29,10,25000,ACTIVE,<marquee>Hacked</marquee>,airline-01
 aircraft-40,lorem,lorem30,10,25000,ACTIVE,<script>alert(‘Hacked!’);</script>,airline-01
