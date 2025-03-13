@@ -39,11 +39,6 @@ public class Review extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				postedMoment;
 
-	//	@Mandatory
-	//	@Valid
-	//	@Automapped
-	//	private ReviewCategory		category;
-
 	@Mandatory
 	@ValidString(min = 1, max = 50)
 	@Automapped
