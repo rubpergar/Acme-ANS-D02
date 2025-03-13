@@ -27,12 +27,12 @@ flight-assignment-22,PILOT,2012/07/02 00:00,PENDING,لوريم إيبسوم,true
 flight-assignment-23,PILOT,2012/07/02 00:00,PENDING,洛伦·伊普森,true,leg-01,member-01
 flight-assignment-24,PILOT,2012/07/02 00:00,PENDING,<marquee>Hacked</marquee>,true,leg-01,member-01
 flight-assignment-25,PILOT,2012/07/02 00:00,PENDING,<script>alert(‘Hacked!’);</script>,true,leg-01,member-01
-flight-assignment-26,PILOT,2012/07/02 00:00,PENDING,' or 'A' = 'A ,true,leg-01,member-01
+flight-assignment-26,PILOT,2012/07/02 00:00,PENDING,' or 'A' = 'A,true,leg-01,member-01
 # draftMode
 flight-assignment-28,PILOT,2012/07/02 00:00,PENDING,lorem,true,leg-01,member-01
 flight-assignment-29,PILOT,2012/07/02 00:00,PENDING,lorem,false,leg-01,member-01
 # leg
-flight-assignment-30,PILOT,2012/07/02 00:00,PENDING,lorem,true,leg-02,member-01
+flight-assignment-30,PILOT,2012/07/02 00:00,PENDING,lorem,true,leg-01,member-01
 # flightCrewMember
 flight-assignment-32,PILOT,2012/07/02 00:00,PENDING,lorem,true,leg-01,member-01
 flight-assignment-33,CO_PILOT,2012/07/02 00:00,PENDING,lorem,true,leg-01,member-02
