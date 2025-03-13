@@ -39,7 +39,7 @@ public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, Tr
 
 			Double resolutionPercentage = trackingLog.getResolutionPercentage();
 			TrackingLogStatus status = trackingLog.getStatus();
-			TrackingLog lastTrackingLog = this.tl.getLastTrackingLog(trackingLog.getClaim().getId());
+			TrackingLog lastTrackingLog = this.tl.getLastTrackingLog(trackingLog.getClaim().getId()).getFirst();
 			String resolution = trackingLog.getResolution();
 
 			if (resolutionPercentage == 100 && status == TrackingLogStatus.PENDING)
@@ -51,7 +51,7 @@ public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, Tr
 			if (status != TrackingLogStatus.PENDING && (resolution == null || resolution.isBlank()))
 				super.state(context, false, "resolution", "acme.validation.trackinglog.resolution-mandatory-if-status-not-pending.message");
 
-			if (lastTrackingLog != null && lastTrackingLog.getResolutionPercentage() > trackingLog.getResolutionPercentage())
+			if (lastTrackingLog != null && lastTrackingLog.getResolutionPercentage() < trackingLog.getResolutionPercentage())
 				super.state(context, false, "resolutionPercentage", "acme.validation.trackinglog.invalid-percentage.message");
 		}
 

@@ -1,0 +1,5 @@
+key,registrationMoment,email,description,type,isAccepted,key:assistanceAgent
+claim-01,2012/07/02 00:00,example1@gmail.com,lorem,FLIGHT_ISSUES,TRUE,agent-01
+claim-02,2012/07/02 00:00,example2@gmail.com,lorem,FLIGHT_ISSUES,FALSE,agent-01
+claim-03,2012/07/02 00:00,example2@gmail.com,lorem,FLIGHT_ISSUES,TRUE,agent-01
+claim-04,2012/07/02 00:00,example2@gmail.com,lorem,FLIGHT_ISSUES,FALSE,agent-01
