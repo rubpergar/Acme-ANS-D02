@@ -59,14 +59,12 @@ airport-51,airport,BVX,INTERNATIONAL,lorem,lorem,"http://example.org/a","acme@lo
 airport-52,airport,BWX,INTERNATIONAL,lorem,lorem,"http://example.org/a/b","acme@lorem-ipsum.org",+123456789
 airport-53,airport,BXX,INTERNATIONAL,lorem,lorem,"http://example.org/a/b?","acme@lorem-ipsum.org",+123456789
 airport-54,airport,BYX,INTERNATIONAL,lorem,lorem,"http://example.org/a/b?a&b","acme@lorem-ipsum.org",+123456789
-airport-55,airport,BZX,INTERNATIONAL,lorem,lorem,,"acme@lorem-ipsum.org",+123456789
 # email
 airport-56,airport,CAX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum","a@b.e",+123456789
 airport-57,airport,CBX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum","a@b.es",+123456789
 airport-58,airport,CCX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum","a@b.esx",+123456789
 airport-59,airport,CDX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum","lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.doloris.edu",+123456789
 airport-60,airport,CEX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum","lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.dolor.es.org",+123456789
-airport-61,airport,CFX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum",null,+123456789
 # phone
 airport-62,airport,CGX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum","acme@lorem-ipsum.org",123456
 airport-63,airport,CHX,INTERNATIONAL,lorem,lorem,"http://lorem.com/ipsum","acme@lorem-ipsum.org",987654321098765

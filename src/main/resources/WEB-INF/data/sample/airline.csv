@@ -48,7 +48,6 @@ airline-41,airline,BLX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"a@b.es"
 airline-42,airline,BMX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"a@b.esx",+123456789
 airline-43,airline,BNX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.doloris.edu",+123456789
 airline-44,airline,BOX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.dolor.es.org",+123456789
-airline-45,airline,BPX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,null,+123456789
 # phone
 airline-46,airline,BQX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",123456
 airline-47,airline,BRX,"http://lorem.com/ipsum",LUXURY,2012/07/02 00:00,"acme@lorem-ipsum.org",987654321098765
