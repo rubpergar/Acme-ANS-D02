@@ -16,3 +16,5 @@ acme.validation.manager.invalid-identifier.message=El identificador del manager 
 acme.validation.PromotionCode.message=El código de promoción no es válido. Debe seguir un patrón de cuatro letras mayúsculas seguidas de dos dígitos que representen el año actual.
 
 acme.validation.wrongPhoneNumber.message=El número de teléfono no es válido. Debe seguir un patrón. Este patrón coincide con un + opcional seguido de 6 a 15 dígitos, asegurando que toda la cadena consista solo en números.
+
+acme.validation.aircraft.duplicate-registration-number.message=El número de registro ya está en uso. Por favor, proporcione uno diferente.

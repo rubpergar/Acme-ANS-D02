@@ -9,13 +9,16 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-@Target(ElementType.TYPE)
+import org.hibernate.validator.constraints.Length;
+
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = FlightValidator.class)
-public @interface ValidFlight {
+@Constraint(validatedBy = UniqueRegistrationNumberValidator.class)
+@Length(min = 1, max = 255)
+public @interface ValidRegistrationNumber {
 
-	String message() default "";
-
+	String message() default "Registration number must be unique";
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};
+
 }

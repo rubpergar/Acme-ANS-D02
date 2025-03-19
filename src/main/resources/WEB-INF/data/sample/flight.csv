@@ -1,4 +1,4 @@
-key,tag,indication,cost,description,key:airline-manager
+key,tag,self-transfer,cost,description,key:airline-manager
 # Base entity
 flight-01,Express Flight,FALSE,EUR 500000.00,Fast and reliable travel,manager-01
 # Tag

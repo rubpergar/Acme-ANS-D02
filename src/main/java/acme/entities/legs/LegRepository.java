@@ -1,6 +1,7 @@
 
 package acme.entities.legs;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
@@ -11,16 +12,22 @@ import acme.client.repositories.AbstractRepository;
 @Repository
 public interface LegRepository extends AbstractRepository {
 
-	@Query("select l from Leg l where l.flight.id = ?1 order by l.scheduledArrival")
-	Leg getFirstLegByFlight(Integer flightId);
+	@Query("select l.scheduledDeparture from Leg l where l.flight.id = :flightId AND l.scheduledDeparture IS NOT NULL order by l.scheduledDeparture")
+	List<Date> getScheduledDeparture(int flightId);
 
-	@Query("select l from Leg l where l.flight.id = ?1 order by l.scheduledArrival desc")
-	Leg getLastLegByFlight(Integer flightId);
+	@Query("select l.scheduledArrival from Leg l where l.flight.id = :flightId AND l.scheduledArrival IS NOT NULL order by l.scheduledDeparture desc")
+	List<Date> getScheduledArrival(int flightId);
 
-	@Query("select count(l) from Leg l where l.flight.id = ?1")
+	@Query("select l.departureAirport.city from Leg l where l.flight.id = :flightId order by l.scheduledDeparture")
+	List<String> getOriginCity(Integer flightId);
+
+	@Query("select l.arrivalAirport.city from Leg l where l.flight.id = :flightId order by l.scheduledDeparture desc")
+	List<String> getDestinationCity(Integer flightId);
+
+	@Query("select count(l) from Leg l where l.flight.id = :flightId")
 	Integer getNumberLegsByFlight(Integer flightId);
 
-	@Query("select l from Leg l where l.flight.id = ?1 order by l.scheduledArrival")
+	@Query("select l from Leg l where l.flight.id = :flightId order by l.scheduledDeparture")
 	List<Leg> getLegsByFlight(Integer flightId);
 
 }
