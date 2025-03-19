@@ -8,18 +8,20 @@ import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
+import javax.validation.ReportAsSingleViolation;
+import javax.validation.constraints.Pattern;
 
-@Constraint(validatedBy = PhoneNumberValidator.class)
-@Target({
-	ElementType.FIELD, ElementType.METHOD, ElementType.ANNOTATION_TYPE
-})
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
+@Constraint(validatedBy = {})
+@ReportAsSingleViolation
+
+@Pattern(regexp = "^\\+?\\d{6,15}$")
+
 public @interface ValidPhoneNumber {
 
-	String message() default "{acme.validation.text.message}";
+	String message() default "{acme.validation.phone-number.message}";
+
 	Class<?>[] groups() default {};
-
-	Class<? extends Payload>[] payload() default
-
-	{};
+	Class<? extends Payload>[] payload() default {};
 }
