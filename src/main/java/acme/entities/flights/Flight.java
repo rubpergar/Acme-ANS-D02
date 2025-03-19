@@ -16,7 +16,6 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidString;
 import acme.client.helpers.SpringHelper;
-import acme.constraints.ValidFlight;
 import acme.entities.legs.LegRepository;
 import acme.realms.Manager;
 import lombok.Getter;
@@ -25,7 +24,6 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@ValidFlight
 public class Flight extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
@@ -42,7 +40,7 @@ public class Flight extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@Automapped
-	private Boolean				indication;
+	private Boolean				selfTransfer;
 
 	@Mandatory
 	@ValidMoney(min = 0, max = 1000000)
@@ -68,18 +66,20 @@ public class Flight extends AbstractEntity {
 		LegRepository repo;
 
 		repo = SpringHelper.getBean(LegRepository.class);
-		scheduledDep = repo.getFirstLegByFlight(this.getId()).getScheduledDeparture();
+
+		scheduledDep = repo.getScheduledDeparture(this.getId()).get(0);
 		return scheduledDep;
 	}
 
 	@Transient
 	public Date getScheduledArrival() {
-		Date scheduledAr;
+		Date scheduledArr;
 		LegRepository repo;
 
 		repo = SpringHelper.getBean(LegRepository.class);
-		scheduledAr = repo.getLastLegByFlight(this.getId()).getScheduledArrival();
-		return scheduledAr;
+
+		scheduledArr = repo.getScheduledArrival(this.getId()).get(0);
+		return scheduledArr;
 	}
 
 	@Transient
@@ -88,7 +88,8 @@ public class Flight extends AbstractEntity {
 		LegRepository repo;
 
 		repo = SpringHelper.getBean(LegRepository.class);
-		origCity = repo.getFirstLegByFlight(this.getId()).getDepartureAirport().getCity();
+
+		origCity = repo.getOriginCity(this.getId()).get(0);
 		return origCity;
 	}
 
@@ -98,7 +99,7 @@ public class Flight extends AbstractEntity {
 		LegRepository repo;
 
 		repo = SpringHelper.getBean(LegRepository.class);
-		destCity = repo.getLastLegByFlight(this.getId()).getArrivalAirport().getCity();
+		destCity = repo.getDestinationCity(this.getId()).get(0);
 		return destCity;
 	}
 
