@@ -11,7 +11,7 @@ import javax.validation.Payload;
 
 @Constraint(validatedBy = PromotionCodeValidator.class)
 @Target({
-	ElementType.FIELD, ElementType.METHOD, ElementType.ANNOTATION_TYPE
+	ElementType.FIELD, ElementType.ANNOTATION_TYPE
 })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ValidPromotionCode {
