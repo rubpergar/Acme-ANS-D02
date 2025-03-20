@@ -17,6 +17,7 @@ import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidIATACode;
 import acme.constraints.ValidPhoneNumber;
 import lombok.Getter;
 import lombok.Setter;
@@ -38,7 +39,7 @@ public class Airline extends AbstractEntity {
 	private String				name;
 
 	@Mandatory
-	@ValidString(pattern = "^[A-Z]{3}$", message = "{validation.airline.codeIATA}")
+	@ValidIATACode
 	@Column(unique = true)
 	private String				codeIATA;
 
