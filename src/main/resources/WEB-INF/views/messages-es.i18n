@@ -18,3 +18,7 @@ acme.validation.PromotionCode.message=El código de promoción no es válido. De
 acme.validation.wrongPhoneNumber.message=El número de teléfono no es válido. Debe seguir un patrón. Este patrón coincide con un + opcional seguido de 6 a 15 dígitos, asegurando que toda la cadena consista solo en números.
 
 acme.validation.aircraft.duplicate-registration-number.message=El número de registro ya está en uso. Por favor, proporcione uno diferente.
+
+acme.validation.manager.invalid-years-of-experience.message=Los años de experiencia no pueden superar la edad del manager.
+
+acme.validation.birthday.invalid-date.message=La edad minima para trabajar en España son 16 años.
