@@ -20,3 +20,7 @@ acme.validation.PromotionCodeLength.message = The promotion code is invalid. It 
 acme.validation.wrongPhoneNumber.message=The phone number is invalid. It must follow a pattern. This pattern matches an optional + followed by 6 to 15 digits, ensuring the entire string consists only of numbers.
 
 acme.validation.aircraft.duplicate-registration-number.message=The registration number is already in use. Please provide a different one.
+
+acme.validation.manager.invalid-years-of-experience.message=Years of experience cannot exceed the manager's age.
+
+acme.validation.birthday.invalid-date.message=The minimum age to work in Spain is 16 years.
