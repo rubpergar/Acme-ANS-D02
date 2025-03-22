@@ -20,3 +20,13 @@ acme.validation.PromotionCodeLength.message = El código de promoción no es vá
 acme.validation.wrongPhoneNumber.message=El número de teléfono no es válido. Debe seguir un patrón. Este patrón coincide con un + opcional seguido de 6 a 15 dígitos, asegurando que toda la cadena consista solo en números.
 
 acme.validation.aircraft.duplicate-registration-number.message=El número de registro ya está en uso. Por favor, proporcione uno diferente.
+
+acme.validation.manager.invalid-identifier-not-duplication.message= El identificador del cliente no es válido. Varios clientes no pueden tener el mismo identificador.
+
+acme.validation.manager.invalid-identifier-notNull.message= El identificador del cliente no es válido. El identificador del cliente no puede ser nulo.
+
+acme.validation.manager.invalid-identifier.message = El identificador del cliente no es válido. Debe comenzar con 2 o 3 letras mayúsculas, seguidas de exactamente 6 dígitos, sin espacios ni caracteres especiales.
+
+acme.validation.LastNibbleWrongFormat.message = El formato del último nibble no es válido. El sistema debe registrar los últimos 4 números de la tarjeta de crédito.
+
+acme.validation.LastNibbleWrongLength.message = El formato del último nibble no es válido. El sistema debe registrar 4 números.

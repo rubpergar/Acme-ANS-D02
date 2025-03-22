@@ -9,10 +9,10 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-@Target(ElementType.TYPE)
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = CustomerValidator.class)
-public @interface ValidCustomer {
+@Constraint(validatedBy = CustomerIdentifierValidator.class)
+public @interface ValidCustomerIdentifier {
 
 	String message() default "";
 
