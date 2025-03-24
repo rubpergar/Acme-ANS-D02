@@ -22,6 +22,17 @@ acme.validation.wrongPhoneNumber.message=The phone number is invalid. It must fo
 
 acme.validation.aircraft.duplicate-registration-number.message=The registration number is already in use. Please provide a different one.
 
+acme.validation.manager.invalid-identifier-not-duplication.message= The customer's identifier is invalid. Many customers must not have the same identifier.
+
+acme.validation.manager.invalid-identifier-notNull.message= The customer's identifier is invalid. Customer's identifier can not be null.
+
+acme.validation.manager.invalid-identifier.message = The customer's identifier is invalid. The identifier must start with 2 or 3 uppercase letters, followed by exactly 6 digits, with no spaces or special characters.
+
+acme.validation.LastNibbleWrongFormat.message = The last nibble format is invalid. The system should record the last 4 numbers of the credit card.
+
+acme.validation.LastNibbleWrongLength.message = The last nibble format is invalid. The system should record 4 numbers.
+
 acme.validation.manager.invalid-years-of-experience.message=Years of experience cannot exceed the manager's age.
 
 acme.validation.birthday.invalid-date.message=The minimum age to work in Spain is 16 years.
+
