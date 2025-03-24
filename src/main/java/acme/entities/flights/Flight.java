@@ -67,7 +67,7 @@ public class Flight extends AbstractEntity {
 
 		repo = SpringHelper.getBean(LegRepository.class);
 
-		scheduledDep = repo.getScheduledDeparture(this.getId()).get(0);
+		scheduledDep = repo.getScheduledDeparture(this.getId()).stream().findFirst().get();
 		return scheduledDep;
 	}
 
@@ -78,7 +78,7 @@ public class Flight extends AbstractEntity {
 
 		repo = SpringHelper.getBean(LegRepository.class);
 
-		scheduledArr = repo.getScheduledArrival(this.getId()).get(0);
+		scheduledArr = repo.getScheduledArrival(this.getId()).stream().findFirst().get();
 		return scheduledArr;
 	}
 
@@ -89,7 +89,7 @@ public class Flight extends AbstractEntity {
 
 		repo = SpringHelper.getBean(LegRepository.class);
 
-		origCity = repo.getOriginCity(this.getId()).get(0);
+		origCity = repo.getOriginCity(this.getId()).stream().findFirst().get();
 		return origCity;
 	}
 
@@ -99,7 +99,7 @@ public class Flight extends AbstractEntity {
 		LegRepository repo;
 
 		repo = SpringHelper.getBean(LegRepository.class);
-		destCity = repo.getDestinationCity(this.getId()).get(0);
+		destCity = repo.getDestinationCity(this.getId()).stream().findFirst().get();
 		return destCity;
 	}
 
