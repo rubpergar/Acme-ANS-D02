@@ -23,10 +23,16 @@ import javax.validation.constraints.Pattern;
 @Pattern(regexp = "^[A-Z]{3}$")
 
 public @interface ValidIATACode {
+
+	// Custom properties ------------------------------------------------------
+
+	String type() default "";
+
 	// Standard validation properties -----------------------------------------
 
-	String message() default "{acme.validation.iataCode.message}";
+	String message() default "";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};
+
 }

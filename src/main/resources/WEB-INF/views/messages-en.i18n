@@ -1,5 +1,6 @@
 validation.airline.phone = The phone number can start with '+' and must have between 6 and 15 digits without blank spaces or special characters
 validation.airline.codeIATA = The code must be formed by 3 capital letters, where the last letter is typically an "X"
+acme.validation.airline.codeIATA.not-unique.message = IATA code must be unique. This value is already used by an airport or an airline.
 
 acme.validation.crew-member.invalid-identifier.message=The identifier is invalid. It must start with their initials (2 or 3 uppercase letters) followed by 6 digits.
 
