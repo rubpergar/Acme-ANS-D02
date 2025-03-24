@@ -1,11 +1,15 @@
 
 package acme.constraints;
 
+import java.util.List;
+
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
+import acme.client.helpers.StringHelper;
+import acme.entities.claims.Claim;
 import acme.entities.trackingLogs.TrackingLog;
 import acme.entities.trackingLogs.TrackingLogRepository;
 import acme.entities.trackingLogs.TrackingLogStatus;
@@ -38,9 +42,22 @@ public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, Tr
 		else {
 
 			Double resolutionPercentage = trackingLog.getResolutionPercentage();
+			if (resolutionPercentage == null)
+				super.state(context, false, "resolutionPercentage", "javax.validation.constraints.NotNull.message");
+
 			TrackingLogStatus status = trackingLog.getStatus();
-			TrackingLog lastTrackingLog = this.tl.getLastTrackingLog(trackingLog.getClaim().getId()).getFirst();
+
+			Claim claim = trackingLog.getClaim();
+			if (claim == null)
+				super.state(context, false, "claim", "javax.validation.constraints.NotNull.message");
+
+			List<TrackingLog> orderedTrackingLogs = this.tl.getLastTrackingLog(claim.getId());
+			if (orderedTrackingLogs == null)
+				super.state(context, false, "lastTrackingLog", "javax.validation.constraints.NotNull.message");
+
 			String resolution = trackingLog.getResolution();
+			if (resolution == null)
+				super.state(context, false, "resolution", "javax.validation.constraints.NotNull.message");
 
 			if (resolutionPercentage == 100 && status == TrackingLogStatus.PENDING)
 				super.state(context, false, "status", "acme.validation.trackinglog.invalid-status.message");
@@ -48,11 +65,13 @@ public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, Tr
 			if (resolutionPercentage != 100 && (status == TrackingLogStatus.ACCEPTED || status == TrackingLogStatus.REJECTED))
 				super.state(context, false, "status", "acme.validation.trackinglog.invalid-status.message");
 
-			if (status != TrackingLogStatus.PENDING && (resolution == null || resolution.isBlank()))
+			if (status != TrackingLogStatus.PENDING && StringHelper.isBlank(resolution))
 				super.state(context, false, "resolution", "acme.validation.trackinglog.resolution-mandatory-if-status-not-pending.message");
 
-			if (lastTrackingLog != null && lastTrackingLog.getResolutionPercentage() < trackingLog.getResolutionPercentage())
-				super.state(context, false, "resolutionPercentage", "acme.validation.trackinglog.invalid-percentage.message");
+			for (TrackingLog t : orderedTrackingLogs)
+				if (t.getLastUpdate().before(trackingLog.getLastUpdate()))
+					if (t.getResolutionPercentage() > trackingLog.getResolutionPercentage())
+						super.state(context, false, "resolutionPercentage", "acme.validation.trackinglog.invalid-percentage.message");
 		}
 
 		result = !super.hasErrors(context);
