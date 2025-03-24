@@ -11,15 +11,9 @@ import javax.validation.Payload;
 
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = CustomerIdentifierValidator.class)
-public @interface ValidCustomerIdentifier {
-
-	// Custom properties ------------------------------------------------------
-
-	String type() default "";
-
-	// Standard validation properties -----------------------------------------
-
+@Constraint(validatedBy = BirthdayValidator.class)
+public @interface ValidBirthday {
+	
 	String message() default "";
 
 	Class<?>[] groups() default {};

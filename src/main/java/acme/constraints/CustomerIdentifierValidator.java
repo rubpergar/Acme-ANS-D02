@@ -15,7 +15,7 @@ import acme.features.authenticated.customer.CustomerRepository;
 import acme.realms.Customer;
 
 @Validator
-public class CustomerIdentifierValidator extends AbstractValidator<ValidCustomerIdentifier, Customer> {
+public class CustomerIdentifierValidator extends AbstractValidator<ValidCustomerIdentifier, String> {
 
 	@Autowired
 	private CustomerRepository repository;
@@ -27,7 +27,7 @@ public class CustomerIdentifierValidator extends AbstractValidator<ValidCustomer
 	}
 
 	@Override
-	public boolean isValid(final Customer customer, final ConstraintValidatorContext context) {
+	public boolean isValid(final String identifier, final ConstraintValidatorContext context) {
 
 		boolean result;
 
@@ -35,13 +35,13 @@ public class CustomerIdentifierValidator extends AbstractValidator<ValidCustomer
 		boolean validNotDuplication = true;
 		boolean validIdentifier = true;
 
-		if (customer == null)
+		if (identifier == null)
 			validNotNull = false;
 
-		String identifier = customer.getIdentifier();
-		if (identifier == null || !identifier.matches("^[A-Z]{2,3}\\d{6}$"))
+		if (!identifier.matches("^[A-Z]{2,3}\\d{6}$"))
 			validIdentifier = false;
 
+		Customer customer = this.repository.findByIdentifier(identifier);
 		DefaultUserIdentity identity = customer.getIdentity();
 
 		String nameInitial = String.valueOf(identity.getName().charAt(0)).toUpperCase();

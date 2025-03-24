@@ -1,5 +1,6 @@
 validation.airline.phone = The phone number can start with '+' and must have between 6 and 15 digits without blank spaces or special characters
 validation.airline.codeIATA = The code must be formed by 3 capital letters, where the last letter is typically an "X"
+acme.validation.airline.codeIATA.not-unique.message = IATA code must be unique. This value is already used by an airport or an airline.
 
 acme.validation.crew-member.invalid-identifier.message=The identifier is invalid. It must start with their initials (2 or 3 uppercase letters) followed by 6 digits.
 
@@ -30,3 +31,8 @@ acme.validation.manager.invalid-identifier.message = The customer's identifier i
 acme.validation.LastNibbleWrongFormat.message = The last nibble format is invalid. The system should record the last 4 numbers of the credit card.
 
 acme.validation.LastNibbleWrongLength.message = The last nibble format is invalid. The system should record 4 numbers.
+
+acme.validation.manager.invalid-years-of-experience.message=Years of experience cannot exceed the manager's age.
+
+acme.validation.birthday.invalid-date.message=The minimum age to work in Spain is 16 years.
+

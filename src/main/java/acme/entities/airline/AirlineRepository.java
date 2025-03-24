@@ -11,7 +11,7 @@ import acme.client.repositories.AbstractRepository;
 @Repository
 public interface AirlineRepository extends AbstractRepository {
 
-	@Query("SELECT a.code FROM Airline a")
+	@Query("SELECT a.codeIATA FROM Airline a")
 	public List<String> airlineCodesIATAs();
 
 }
