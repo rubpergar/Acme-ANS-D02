@@ -1,10 +1,13 @@
 
 package acme.constraints;
 
+import java.util.Date;
+
 import javax.validation.ConstraintValidatorContext;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.client.helpers.StringHelper;
 import acme.realms.Manager;
 
@@ -33,6 +36,13 @@ public class ManagerValidator extends AbstractValidator<ValidManager, Manager> {
 
 		boolean validIdentifier = StringHelper.startsWith(identifierNumber, initials, true);
 		super.state(context, validIdentifier, "identifierNumber", "acme.validation.manager.invalid-identifier.message");
+
+		Date dateOfBirth = manager.getDateOfBirth();
+		Date present = MomentHelper.getCurrentMoment();
+		long edad = MomentHelper.computeDuration(dateOfBirth, present).toDays() / 365;
+		Integer yearsOfExperience = manager.getYearsOfExperience();
+		if (yearsOfExperience == null || yearsOfExperience > (int) edad)
+			super.state(context, false, "yearsOfExperience", "acme.validation.manager.invalid-years-of-experience.message");
 
 		return !super.hasErrors(context);
 	}
